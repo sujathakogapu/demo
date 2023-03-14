@@ -1,1 +1,1 @@
-# I created this repository to learn java
+# I created this repository to learn java programming language.
