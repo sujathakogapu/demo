@@ -1,6 +1,13 @@
 package com.example.strings;
 
 import java.util.Scanner;
+/*
+2.Write a program to reverse a string.
+  Input:
+  Enter a string: hello world
+  Output:
+  The reversed string is: dlrow olleh
+*/
 
 public class ReverseString {
 	public static void main(String[] args) {
