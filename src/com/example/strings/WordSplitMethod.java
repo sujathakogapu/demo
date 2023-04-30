@@ -24,13 +24,10 @@ public class WordSplitMethod {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter a sentence:");//hi hello world
 		String inputStr = scanner.nextLine();
-		String[] words = inputStr.split(" ");
-		String splitWords = "";
+		String[] words = inputStr.split(" ");//split() will divide the line based on given character and converts into string array
 		for (int i = 0; i < words.length; i++) {
-		    splitWords = splitWords + words[i];
+			System.out.println(words[i]);
 		}
-		System.out.println(splitWords);
 		scanner.close();
 	}
-
 }
