@@ -1,4 +1,4 @@
-package com.example.basics;
+package com.example.patterns;
 /*
 1.Print a square pattern of stars using nested loops.
   Input:

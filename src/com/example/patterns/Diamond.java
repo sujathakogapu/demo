@@ -1,4 +1,4 @@
-package com.example.basics;
+package com.example.patterns;
 
 public class Diamond {
 	public static void main(String[] args) {
