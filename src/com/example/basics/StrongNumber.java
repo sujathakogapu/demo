@@ -1,29 +1,47 @@
 package com.example.basics;
 
 import java.util.Scanner;
-
+/*
+23. Write a program to check if a given number is a strong number or not.
+    A Strong number is a number, where the sum of the factorial of the
+    digits is equal to the number itself. 1, 2, 145, and 40585 are some
+    examples of Strong numbers.
+    For instance, 145 is a Strong number
+    145 = 1!+4!+5! =1+24+120 =145
+    Since the sum of the factorial of all digits is equal to the number
+    itself, hence it is a Strong number.
+    Input1:
+    Enter n: 145
+    Output1:
+    145 is a strong number.
+    Input2:
+    Enter n: 140
+    Output2:
+    140 is not a strong number.
+ */
 public class StrongNumber {
 	public static void main(String[] args) {
 		int num2 = 0, lastdigit, sumOfFact = 0, fact = 1;
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter a number:");
+		System.out.println("Enter a number:");//145
 		int num1 = scanner.nextInt();
-		num1 = num2;
-		while (num2 > 0) {
-			lastdigit = num2 % 10;
-			for (int i = 1; i <= lastdigit; i++) {
-				fact = fact * i;
+		num2=num1;//num2=145
+		while (num2 > 0) {//145>0->true
+			lastdigit = num2 % 10;//145%10=5,
+			for (int i = 1; i <= lastdigit; i++) {//1,2,3,4,5
+				fact = fact * i;//first iteration:1*1,1*2,2*3,6*4,24*5-
 			}
 			sumOfFact = sumOfFact + fact;
 			num2 = num2 / 10;
 		}
 		if (num1 == sumOfFact) {
-			System.out.println("Given no is a strong number:" + num1);
+			System.out.println(num1+" is a strong number:");
 		} else {
 
-			System.out.println("Given no is not strong number:" + num1);
+			System.out.println(num1+" is not strong number:");
 		}
 		scanner.close();
 
 	}
 }
+//

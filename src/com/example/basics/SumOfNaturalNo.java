@@ -10,7 +10,6 @@ public class SumOfNaturalNo {
 		int num = scanner.nextInt();// num=5
 		int i = 1;
 		while (i <= num) {
-
 			// for (int i = 1; i <= num; i++) {//
 			// i=1;1<=5;1++,2<=5;2++,3<=5;3++;4<=5,4++;5<=5,5++,6<=5
 			sum = sum + i;

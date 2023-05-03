@@ -8,7 +8,6 @@ import java.util.Scanner;
   Output:
   The number of vowels in the string is: 3
 */
-
 public class CountVowels {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
