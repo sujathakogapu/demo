@@ -3,7 +3,6 @@ package com.example.patterns;
 public class Diamond {
 	public static void main(String[] args) {
 		{
-
 			int number = 7;
 			int m, n;
 			for (m = 1; m <= number; m++) {
