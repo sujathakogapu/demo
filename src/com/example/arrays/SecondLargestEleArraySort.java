@@ -12,6 +12,7 @@ import java.util.Scanner;
 */
 public class SecondLargestEleArraySort {
 	public static void main(String[] args) {
+		//step1 : get input from the user
 		Scanner sc = new Scanner(System.in);
 		int length;
 		while (true) {
@@ -28,7 +29,9 @@ public class SecondLargestEleArraySort {
 		for (int i = 0; i < length; i++) {//
 			arr[i] = sc.nextInt();
 		}
+		//step2:sort the array
 		Arrays.sort(arr);//5,10,15,20,25
+		//step3:find the second largest
 		int secondLargest = 0;
 		for (int i = arr.length - 2; i >= 0; i--) {//3;3>=0;2,
 			if (arr[i] != arr[arr.length - 1]) {//20!=25

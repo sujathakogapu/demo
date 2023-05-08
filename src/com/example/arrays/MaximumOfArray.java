@@ -3,7 +3,7 @@ package com.example.arrays;
 import java.util.Scanner;
 
 /*
- * 2.Write a program to find the maximum element in an array.
+2.Write a program to find the maximum element in an array.
    Input:
    Enter the size of the array: 5
    Enter the array elements: 10 5 20 25 15
