@@ -9,13 +9,13 @@ public class FloatWrapperClassMethods {
 		float num1=scanner.nextFloat();
 		System.out.println("ENter a second number: ");
 		float num2=scanner.nextFloat();
-		String string1="12345";
-		String string2="6789";
         Float number1 = new Float(num1);
         Float number2 = new Float(num2);
+        System.out.println("Equals method: "+number1.equals(number2));
+        System.out.println("compareTo method: "+number1.compareTo(number2));
         System.out.println("Float to string: "+Float.toString(num2));
         System.out.println("float value: "+Float.valueOf(num1));
-        System.out.println("parse float: "+Float.parseFloat(string1));
+        System.out.println("parse float: "+Float.parseFloat(number1.toString()));
         System.out.println("floats in bytes: "+Float.BYTES);
         System.out.println("floats nan method: "+Float.isNaN(num2));
         System.out.println("floats negitive infinity method: "+Float.NEGATIVE_INFINITY);

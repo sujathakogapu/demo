@@ -4,7 +4,7 @@ public class WrapperClassExamples {
 	public static void main(String[] args) {
 		// create an Integer object
 		Integer number = new Integer(100);
-		System.out.println("Integer number: "+number);
+		System.out.println("Integer object: "+number);
 		// convert a String to an Integer object
 		String string = "500";
 		Integer number2 = Integer.valueOf(string);
@@ -23,7 +23,7 @@ public class WrapperClassExamples {
 		// convert a String to a Float object
 		String string2 = "75.5";
 		Float number6 = Float.valueOf(string2);
-		System.out.println("Float to string: "+number6);
+		System.out.println("string to float: "+number6);
 		// Autoboxing:convert float to Float object
 		float salary2 = 10000;
 		Float number7 = salary2;
@@ -64,18 +64,18 @@ public class WrapperClassExamples {
 
 		// create a Boolean object
 		Boolean isStudent = new Boolean(true);
-		System.out.println(isStudent);
+		System.out.println("Boolean object: "+isStudent);
 		// convert a String to Boolean object
 		String string5 = "true";
 		Boolean isStudent2 = Boolean.valueOf(string5);
-		System.out.println(string5);
+		System.out.println("string to boolean: "+string5);
 		// Autoboxing:convert to boolean to Boolean object
 		boolean isStudent3 = false;
 		Boolean isStudent4 = isStudent3;
-		System.out.println(isStudent4);
+		System.out.println("Autoboxing: "+isStudent4);
 		// unboxing:convert a Boolean object to boolean
 		boolean isStudent5 = isStudent4;
-		System.out.println(isStudent5);
+		System.out.println("unboxing: "+isStudent5);
 
 		// create a Byte object
 		byte byteVar= 20;
@@ -83,46 +83,46 @@ public class WrapperClassExamples {
 		System.out.println("Byte object: "+byteobj);
 		// convert a String to Byte object
 		String string6 = "12";
-		Byte str = Byte.valueOf(string6);
+		Byte str = Byte.valueOf("string to object: "+string6);
 		System.out.println(str);
 		// Autoboxing:convert byte to Byte object
 		byte num = 12;
 		Byte num2 = byteVar;
-		System.out.println(num2);
+		System.out.println("autoboxing: "+num2);
 		// unboxing:convert to Byte object to byte
 		byte num3 = num2;
-		System.out.println(num3);
+		System.out.println("unboxing: "+num3);
 
 		// create a Long object
 		Long num4 = new Long(12345);
-		System.out.println(num4);
+		System.out.println("Long object: "+num4);
 		// convert a String to Long object
 		String string7 = "world";
 		Long num5 = Long.getLong(string7, num4);
-		System.out.println(num5);
+		System.out.println("string to long: "+num5);
 		// Autoboxing:convert long to Long object
 		long num6 = 1234567;
 		Long num7 = num6;
-		System.out.println(num7);
+		System.out.println("autoboxing: "+num7);
 		// unboxing:convert a Long object to long
 		long num8 = num7;
-		System.out.println(num8);
+		System.out.println("unboxing: "+num8);
 
 		// create a Short object
 		short shortVar = 20;
-		Short abc = new Short(shortVar);
-		System.out.println(abc);
+		Short short1 = new Short(shortVar);
+		System.out.println("Short object: "+short1);
 		// convert a String to Short object
 		String string8 = "12345";
-		Long klm = Long.valueOf(string8);
-		System.out.println(klm);
+		Long short2 = Long.valueOf(string8);
+		System.out.println("string to short: "+short2);
 		// Autoboxing:convert a short to Short object
-		short pqr = 12;
-		Short xyz = pqr;
-		System.out.println(xyz);
+		short short3 = 12;
+		Short short4 = short3;
+		System.out.println("autoboxing: "+short4);
 		// unboxing:convert a Short object to short
-		short ijk = xyz;
-		System.out.println(ijk);
+		short short5 = short4;
+		System.out.println("unboxing: "+short5);
 
 	}
 }
