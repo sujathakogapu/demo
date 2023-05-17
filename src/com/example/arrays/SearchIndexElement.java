@@ -10,18 +10,8 @@ import java.util.Scanner;
     The index of 30 is 2
 */
 public class SearchIndexElement {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter the size of the array :");//5
-		int length = scanner.nextInt();
-		int[] arr = new int[length];
-		System.out.println("Enter the array elements:");//10,20,30,40,50
-		for (int i = 0; i < length; i++) {//0<5;1,1<5;2,2<5;3,3<5;4,4<5;5,5<5->false
-			arr[i] = scanner.nextInt();
-		}
-		int index = -1;
-		System.out.print("Enter the search element:");//30
-		int element = scanner.nextInt();
+	public int arrayEleSearch(int[] arr, int element) {
+		int index=-1;
 		int i = 0;
 		while (i < arr.length) {//0<5->true,1<5->true,2<5->true
 			if (arr[i] == element) {//10,20,30
@@ -31,7 +21,22 @@ public class SearchIndexElement {
 			i++;//1+1=2
 		}
 
-		System.out.println("Index of " + element + " is : " + index);//2
+		return index;
+	}
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the size of the array :");//5
+		int length = scanner.nextInt();
+		int[] arr = new int[length];
+		System.out.println("Enter the array elements:");//10,20,30,40,50
+		for (int i = 0; i < length; i++) {//0<5;1,1<5;2,2<5;3,3<5;4,4<5;5,5<5->false
+			arr[i] = scanner.nextInt();
+		}
+		System.out.print("Enter the search element:");//30
+		int element = scanner.nextInt();
+		SearchIndexElement obj=new SearchIndexElement();
+		int output=obj.arrayEleSearch(arr, element);
+		System.out.println("Index of " + element + " is : " + output);//2
 		scanner.close();
 	}
 }

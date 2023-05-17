@@ -11,16 +11,7 @@ package com.example.arrays;
 import java.util.Scanner;
 
 public class DuplicateElements {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter the size of the array: ");
-		int length = scanner.nextInt();
-		System.out.println("Enter the array elements:");
-		int[] arr = new int[length];
-		for (int i = 0; i < arr.length; i++) {
-			arr[i] = scanner.nextInt();
-		}
-		scanner.close();
+	public int duplicateArrays(int arr[], int length) {
 		int size = arr.length;
 		for (int i = 0; i < size; i++) {
 			for (int j = i + 1; j < size; j++) {
@@ -33,10 +24,25 @@ public class DuplicateElements {
 				}
 			}
 		}
-		System.out.println("  Array elements after deletion of the duplicate elements: ");
-		for (int i = 0; i < size; i++) {
+		return size;
+	}
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the size of the array: ");
+		int length = scanner.nextInt();
+		System.out.println("Enter the array elements:");
+		int[] arr = new int[length];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = scanner.nextInt();
+		}
+
+		scanner.close();
+		DuplicateElements elements = new DuplicateElements();
+		int removeDuplicateEle = elements.duplicateArrays(arr, length);
+		System.out.println("  Array elements after deletion of the duplicate elements: " + removeDuplicateEle);
+		for (int i = 0; i < length; i++) {
 			System.out.print(arr[i] + " ");
 		}
-		return;
 	}
 }

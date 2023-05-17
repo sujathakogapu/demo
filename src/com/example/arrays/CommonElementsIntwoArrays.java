@@ -13,36 +13,38 @@ import java.util.Scanner;
     The common elements are: 3 4
 */
 public class CommonElementsIntwoArrays {
+	public int commonElements(int arr1[], int arr2[], int length1, int length2) {
+		int index = 0;
+		int[] commonElements = new int[length1];
+		for (int i = 0; i < length1; i++) {
+			for (int j = 0; j < length2; j++)
+				if (arr1[i] == arr2[j]) {
+					commonElements[index] = arr1[i];
+					index++;
+				}
+		}
+		return index;
+	}
+
 	public static void main(String[] args) {
-		int i, j;
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the size of the 1st array:");
 		int length1 = scanner.nextInt();
 		System.out.println("Enter the array elements:");
 		int[] arr1 = new int[length1];
-		for (i = 0; i < arr1.length; i++) {
+		for (int i = 0; i < arr1.length; i++) {
 			arr1[i] = scanner.nextInt();
 		}
 		System.out.println("Enter the size of the 2nd array:");
 		int length2 = scanner.nextInt();
 		System.out.println(" Enter the array elements:");
 		int[] arr2 = new int[length2];
-		for (j = 0; j < arr2.length; j++) {
+		for (int j = 0; j < arr2.length; j++) {
 			arr2[j] = scanner.nextInt();
 		}
-		int index = 0;
-		int[] commonElements = new int[length1];
-		for (i = 0; i < length1; i++) {
-			for (j = 0; j < length2; j++)
-				if (arr1[i] == arr2[j]) {
-					commonElements[index] = arr1[i];
-					index++;
-				}
-		}
-		// System.out.print("common elements: ");
-		for (int element : commonElements) {
-			System.out.print(element + " ");
-		}
+		CommonElementsIntwoArrays elements = new CommonElementsIntwoArrays();
+		int commonElementsArray = elements.commonElements(arr1, arr2, length1, length2);
+		System.out.print("common elements are: " + commonElementsArray);
 		scanner.close();
 	}
 }

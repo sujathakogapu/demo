@@ -12,6 +12,16 @@ import java.util.Scanner;
     The element 3 occurs 2 times in the array
  */
 public class NumberOccurrences {
+	public int numberOccurrencesEle(int[] arr){
+		int search = 0;
+		int count = 0;
+		for (int i = 0; i < arr.length; i++) {//0<6;1,1<6;2,2<6;3,3<6,4;4<6;5,5<6;6;6<6->false
+			if (arr[i] == search) {//arr[3]==3->true,arr[7]==3->false,arr[2]==3->false,arr[9]==3->false,arr[6]==3->false,arr[3===3->true
+				count = count + 1;//0+1,1+1->2
+			}
+		}
+		return search;
+	}
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter a length of the array:");//6
@@ -21,16 +31,9 @@ public class NumberOccurrences {
 		for(int i=0;i<length;i++) {//0<6;1,1<6;2,2<6;3,3<6,4;4<6;5,5<6;6;6<6->false
 			arr[i]=scanner.nextInt();
 		}
-		int search = 0;
-		System.out.print("Enter the element to be searched :");//3
-		search = scanner.nextInt();
-		int count = 0;
-		for (int i = 0; i < arr.length; i++) {//0<6;1,1<6;2,2<6;3,3<6,4;4<6;5,5<6;6;6<6->false
-			if (arr[i] == search) {//arr[3]==3->true,arr[7]==3->false,arr[2]==3->false,arr[9]==3->false,arr[6]==3->false,arr[3===3->true
-				count = count + 1;//0+1,1+1->2
-			}
-		}
-		System.out.print("The element " + search + " occurs " + count + " times in the array");
+		NumberOccurrences obj=new NumberOccurrences();
+		int output=obj.numberOccurrencesEle(arr);
+		System.out.print("The element occurences: "+output );
 		scanner.close();
 	}
 		}

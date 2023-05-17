@@ -11,6 +11,17 @@ import java.util.Scanner;
   The second largest element is 20
 */
 public class SecondLargestEleArraySort {
+	public int secondLargestEle(int[] arr) {
+		Arrays.sort(arr);//5,10,15,20,25
+		int secondLargest = 0;
+		for (int i = arr.length - 2; i >= 0; i--) {//3;3>=0;2,
+			if (arr[i] != arr[arr.length - 1]) {//20!=25
+				secondLargest = arr[i];//20
+				break;
+			}
+		}
+		return secondLargest;
+	}
 	public static void main(String[] args) {
 		//step1 : get input from the user
 		Scanner sc = new Scanner(System.in);
@@ -29,17 +40,10 @@ public class SecondLargestEleArraySort {
 		for (int i = 0; i < length; i++) {//
 			arr[i] = sc.nextInt();
 		}
-		//step2:sort the array
-		Arrays.sort(arr);//5,10,15,20,25
-		//step3:find the second largest
-		int secondLargest = 0;
-		for (int i = arr.length - 2; i >= 0; i--) {//3;3>=0;2,
-			if (arr[i] != arr[arr.length - 1]) {//20!=25
-				secondLargest = arr[i];//20
-				break;
-			}
-		}
-		System.out.println("The second largest element is " + secondLargest);//20
+		SecondLargestEleArraySort obj=new SecondLargestEleArraySort();
+		int output=obj.secondLargestEle(arr);
+		
+		System.out.println("The second largest element is " + output);//20
 		sc.close();
 	}
 }
