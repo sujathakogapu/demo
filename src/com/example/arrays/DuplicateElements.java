@@ -11,8 +11,9 @@ package com.example.arrays;
 import java.util.Scanner;
 
 public class DuplicateElements {
-	public int duplicateArrays(int arr[], int length) {
-		int size = arr.length;
+	int size=0;
+	public int[] removeDuplicates(int arr[]) {
+		size=arr.length;
 		for (int i = 0; i < size; i++) {
 			for (int j = i + 1; j < size; j++) {
 				if (arr[i] == arr[j]) {
@@ -24,7 +25,7 @@ public class DuplicateElements {
 				}
 			}
 		}
-		return size;
+		return arr;
 	}
 
 	public static void main(String[] args) {
@@ -39,10 +40,10 @@ public class DuplicateElements {
 
 		scanner.close();
 		DuplicateElements elements = new DuplicateElements();
-		int removeDuplicateEle = elements.duplicateArrays(arr, length);
-		System.out.println("  Array elements after deletion of the duplicate elements: " + removeDuplicateEle);
-		for (int i = 0; i < length; i++) {
-			System.out.print(arr[i] + " ");
+		int[] outputArray = elements.removeDuplicates(arr);
+		System.out.println("Array elements after deletion of the duplicate elements: ");
+		for (int i = 0; i < elements.size; i++) {
+			System.out.print(outputArray[i] + " ");
 		}
 	}
 }

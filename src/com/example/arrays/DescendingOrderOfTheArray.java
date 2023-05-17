@@ -11,23 +11,20 @@ import java.util.Scanner;
     Array in descending order: 25 20 15 10 5
 */
 public class DescendingOrderOfTheArray {
-	public int descendingOrder(int arr[], int length) {
+	public int[] applyDescendingOrder(int arr[]) {
 		int temp = 0;
-		System.out.println("The original array elements is:");
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
-		}
-		for (int i = 0; i < arr.length; i++) {
+		for (int i = 0; i < arr.length-1; i++) {
 			for (int j = i + 1; j < arr.length; j++) {
-				if (arr[i] < arr[j + 1]) {
+				if (arr[i] < arr[j]) {
 					temp = arr[i];
 					arr[i] = arr[j];
 					arr[j] = temp;
 				}
 			}
 		}
-		return temp;
+		return arr;
 	}
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the size of the array: ");
@@ -38,10 +35,10 @@ public class DescendingOrderOfTheArray {
 			arr[i] = scanner.nextInt();
 		}
 		DescendingOrderOfTheArray arrayOrder = new DescendingOrderOfTheArray();
-		int descendingOrderArray = arrayOrder.descendingOrder(arr, length);
-		System.out.println("Array in descnding order:" + descendingOrderArray);
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
+		int[] descendingOrderArray = arrayOrder.applyDescendingOrder(arr);
+		System.out.print("Array in descnding order: ");
+		for (int i = 0; i < descendingOrderArray.length; i++) {
+			System.out.print(descendingOrderArray[i] + " ");
 		}
 		scanner.close();
 
