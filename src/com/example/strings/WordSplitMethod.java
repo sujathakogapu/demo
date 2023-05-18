@@ -23,8 +23,6 @@ public class WordSplitMethod {
 	public String[] getWordSplit(String inputStr) {
 		String[] words = inputStr.split(" ");// split() will divide the line based on given character and converts into
 												// string array
-		for (int i = 0; i < words.length; i++) {
-		}
 		return words;
 	}
 
@@ -34,7 +32,9 @@ public class WordSplitMethod {
 		String inputStr = scanner.nextLine();
 		WordSplitMethod obj = new WordSplitMethod();
 		String[] outputStrings = obj.getWordSplit(inputStr);
-		System.out.println(outputStrings);
+		for(int i=0;i< outputStrings.length;i++) {
+			System.out.println(outputStrings[i]);
+		}
 		scanner.close();
 	}
 }

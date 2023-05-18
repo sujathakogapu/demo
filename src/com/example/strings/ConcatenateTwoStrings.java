@@ -11,10 +11,9 @@ import java.util.Scanner;
   The concatenated string is: helloworld
 */
 public class ConcatenateTwoStrings {
-	public String getConcatenateTwoStrings(String inputStr1, String inputStr2) {
+	public String concatenate(String inputStr1, String inputStr2) {
 		String outputStr3 = "";
 		outputStr3 = inputStr1.concat(inputStr2);// hello sir.concate(gud morning)
-		System.out.print("The concatenated string is:" + outputStr3);// hello sir gud morning
 		return outputStr3;
 	}
 
@@ -25,7 +24,7 @@ public class ConcatenateTwoStrings {
 		System.out.println("Enter the second string:");// gud morning
 		String inputStr2 = scanner.next();
 		ConcatenateTwoStrings obj = new ConcatenateTwoStrings();
-		String outputString = obj.getConcatenateTwoStrings(inputStr1, inputStr2);
+		String outputString = obj.concatenate(inputStr1, inputStr2);
 		System.out.println("The concatenated string is: " + outputString);
 		scanner.close();
 	}

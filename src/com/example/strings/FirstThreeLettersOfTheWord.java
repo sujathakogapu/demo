@@ -11,7 +11,7 @@ import java.util.Scanner;
     First three letters: Ele
 */
 public class FirstThreeLettersOfTheWord {
-	public String getFirstThreeLettersInWord(String inputStr) {
+	public String getFirstThreeLetters(String inputStr) {
 		String outputStr = "";
 		outputStr = inputStr.substring(0, 3);
 		return outputStr;
@@ -22,7 +22,7 @@ public class FirstThreeLettersOfTheWord {
 		System.out.print("Enter a string:");
 		String inputStr = scanner.nextLine();
 		FirstThreeLettersOfTheWord obj = new FirstThreeLettersOfTheWord();
-		String outputString = obj.getFirstThreeLettersInWord(inputStr);
+		String outputString = obj.getFirstThreeLetters(inputStr);
 		System.out.print("First three letters:" + outputString);
 		scanner.close();
 	}

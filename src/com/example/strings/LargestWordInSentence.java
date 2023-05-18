@@ -10,7 +10,7 @@ import java.util.Scanner;
     The largest word in the sentence is: jumps
 */
 public class LargestWordInSentence {
-	public String getlargestWord(String inputStr) {
+	public String getLargestWord(String inputStr) {
 		String[] words = inputStr.split(" ");
 		String largestWord = "";
 		int largeWordLength = 0;
@@ -30,7 +30,7 @@ public class LargestWordInSentence {
 		System.out.println("Enter a sentence:");// hi good morning
 		String inputStr = scanner.nextLine();
 		LargestWordInSentence obj = new LargestWordInSentence();
-		String outputString = obj.getlargestWord(inputStr);
+		String outputString = obj.getLargestWord(inputStr);
 		System.out.println("the largest word in the sentence:" + outputString);// morning
 		scanner.close();
 	}

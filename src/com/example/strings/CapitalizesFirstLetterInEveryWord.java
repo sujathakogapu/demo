@@ -11,23 +11,22 @@ import java.util.Scanner;
     Java Programming Is Fun
 */
 public class CapitalizesFirstLetterInEveryWord {
-	public String getCapitalizesFirstLetterOfEachWord(String inputStr) {
+	public String capitalizeEachWord(String inputStr) {
 		String outputStr = " ";
-		String[] words = null;
+		String[] words = inputStr.split(" ");
 		for (int i = 0; i < words.length; i++) {// java
 			String word = words[i];
 			outputStr = outputStr + " " + word.substring(0, 1).toUpperCase() + word.substring(1);
 		}
-		System.out.println(outputStr.trim());
-		return outputStr;
+		return outputStr.trim();
 	}
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter a string:");
 		String inputStr = scanner.nextLine();
-		String[] words = inputStr.split(" ");
 		CapitalizesFirstLetterInEveryWord obj = new CapitalizesFirstLetterInEveryWord();
-		String output=obj.getCapitalizesFirstLetterOfEachWord(inputStr);
+		String output = obj.capitalizeEachWord(inputStr);
 		System.out.println(output);
 		scanner.close();
 	}

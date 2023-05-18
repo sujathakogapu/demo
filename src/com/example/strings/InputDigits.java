@@ -11,7 +11,7 @@ import java.util.Scanner;
     The string contains only digits
 */
 public class InputDigits {
-	public boolean checkInputDigits(String inputStr, String digits) {
+	public boolean hasDigits(String inputStr, String digits) {
 		boolean isNumber = true;
 		for (int i = 0; i < inputStr.length(); i++) {// 0,1,2,3
 			char ch = inputStr.charAt(i);// 1,2,3,h
@@ -34,7 +34,7 @@ public class InputDigits {
 		String inputStr = scanner.nextLine();
 		String digits = "0123456789";
 		InputDigits obj = new InputDigits();
-		boolean output = obj.checkInputDigits(inputStr, digits);
+		boolean output = obj.hasDigits(inputStr, digits);
 		System.out.println("The String contains only digits?: " + output);
 		scanner.close();
 	}

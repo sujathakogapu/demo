@@ -10,7 +10,7 @@ import java.util.Scanner;
 */
 
 public class LengthOfAString {
-	public int getLengthSAString(String inputStr) {
+	public int getLength(String inputStr) {
 		int stringLength = inputStr.length();
 		return stringLength;
 	}
@@ -20,7 +20,7 @@ public class LengthOfAString {
 		System.out.println("Enter a string:");// Teekshi
 		String inputStr = scanner.nextLine();
 		LengthOfAString obj = new LengthOfAString();
-		int output = obj.getLengthSAString(inputStr);
+		int output = obj.getLength(inputStr);
 		System.out.print("The length of a string is:" + output);// Teekshi.length()->7
 		scanner.close();
 	}

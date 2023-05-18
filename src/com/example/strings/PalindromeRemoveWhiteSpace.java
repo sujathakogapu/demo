@@ -10,17 +10,16 @@ import java.util.Scanner;
   The string is a valid palindrome
 */
 public class PalindromeRemoveWhiteSpace {
-	public boolean getpalindromeRemoveWhiteSpace(String inputStr) {
+	public boolean isValidPalindrome(String inputStr) {
 		String outputStr=" ";
+		boolean isPalindrome=false;
 		for (int i = inputStr.length() - 1; i >= 0; i--) {//m,o,m, ,i,h
 			outputStr = outputStr + inputStr.charAt(i);//mom ih.replace(" ","")->momhi
 		}
-		if (inputStr.equalsIgnoreCase(outputStr))//hi mom.equals(momhi) 
-			System.out.print("The string is a valid palindrome");
-		else {
-			System.out.print("The string is not a valid palindrome");
-	}
-		return (Boolean) null;
+		if (inputStr.equalsIgnoreCase(outputStr)) {
+			isPalindrome=true;
+		}
+		return isPalindrome;
 	}
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -29,7 +28,7 @@ public class PalindromeRemoveWhiteSpace {
 		inputStr=inputStr.replace(" ", "");
 		scanner.close();
 		PalindromeRemoveWhiteSpace obj=new PalindromeRemoveWhiteSpace();
-		boolean output=obj.getpalindromeRemoveWhiteSpace(inputStr);
+		boolean output=obj.isValidPalindrome(inputStr);
 		System.out.println("The string is a valid palindrome?: "+output);
 	}
 }

@@ -13,13 +13,12 @@ import java.util.Scanner;
 public class CommonCharcterinGivenStrings {
 	public  String getCommonCharcter(String inputStr1, String inputStr2)
 	{
-		String commonChar=" ";
-		
-		int count = 0;
+		String commonChar="";
 		for (int i = 0; i < inputStr1.length(); i++) {//h,e,l,l,o
 			for (int j = 0; j < inputStr2.length(); j++) {//w,o,r,l,d
 				if (inputStr1.charAt(i) == inputStr2.charAt(j)) {//h==w,o,r,l,d->false,e==w,o,r,l,d->false,l==w,o,r,l,d->true,l==w,o,r,l,d->true,o==w,o,r,l,d->false
-				count++;
+					String inputString = "";
+					commonChar=commonChar+inputString.charAt(i);
 				}
 			
 			}

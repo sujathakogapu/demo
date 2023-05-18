@@ -10,7 +10,7 @@ import java.util.Scanner;
   The number of vowels in the string is: 3
 */
 public class CountVowels {
-	public int getCountVowels(String inputStr) {
+	public int countVowels(String inputStr) {
 		int count = 0;
 		for (int i = 0; i < inputStr.length(); i++) {
 			if (inputStr.charAt(i) == 'a' || inputStr.charAt(i) == 'e' || inputStr.charAt(i) == 'i'
@@ -27,7 +27,7 @@ public class CountVowels {
 		System.out.println("Enter a string:");// hello world
 		String inputStr = scanner.nextLine();
 		CountVowels obj = new CountVowels();
-		int output = obj.getCountVowels(inputStr);
+		int output = obj.countVowels(inputStr);
 		System.out.print("The number of vowels in the string is:" + output);
 		scanner.close();
 	}
