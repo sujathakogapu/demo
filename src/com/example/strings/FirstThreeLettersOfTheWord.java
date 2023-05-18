@@ -11,13 +11,19 @@ import java.util.Scanner;
     First three letters: Ele
 */
 public class FirstThreeLettersOfTheWord {
+	public String getFirstThreeLettersInWord(String inputStr) {
+		String outputStr = "";
+		outputStr = inputStr.substring(0, 3);
+		return outputStr;
+	}
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter a string:");
 		String inputStr = scanner.nextLine();
-		String outputStr = "";
-		outputStr = inputStr.substring(0, 3);
-		System.out.print("First three letters:" + outputStr);
+		FirstThreeLettersOfTheWord obj = new FirstThreeLettersOfTheWord();
+		String outputString = obj.getFirstThreeLettersInWord(inputStr);
+		System.out.print("First three letters:" + outputString);
 		scanner.close();
 	}
 }

@@ -10,11 +10,18 @@ import java.util.Scanner;
 */
 
 public class LengthOfAString {
+	public int getLengthSAString(String inputStr) {
+		int stringLength = inputStr.length();
+		return stringLength;
+	}
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter a string:");//Teekshi
+		System.out.println("Enter a string:");// Teekshi
 		String inputStr = scanner.nextLine();
-		System.out.print("The length of a string is:" + inputStr.length());//Teekshi.length()->7
+		LengthOfAString obj = new LengthOfAString();
+		int output = obj.getLengthSAString(inputStr);
+		System.out.print("The length of a string is:" + output);// Teekshi.length()->7
 		scanner.close();
 	}
 }

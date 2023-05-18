@@ -20,14 +20,21 @@ import java.util.Scanner;
     dog
 */
 public class WordSplitMethod {
+	public String[] getWordSplit(String inputStr) {
+		String[] words = inputStr.split(" ");// split() will divide the line based on given character and converts into
+												// string array
+		for (int i = 0; i < words.length; i++) {
+		}
+		return words;
+	}
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter a sentence:");//hi hello world
+		System.out.println("Enter a sentence:");// hi hello world
 		String inputStr = scanner.nextLine();
-		String[] words = inputStr.split(" ");//split() will divide the line based on given character and converts into string array
-		for (int i = 0; i < words.length; i++) {
-			System.out.println(words[i]);
-		}
+		WordSplitMethod obj = new WordSplitMethod();
+		String[] outputStrings = obj.getWordSplit(inputStr);
+		System.out.println(outputStrings);
 		scanner.close();
 	}
 }
