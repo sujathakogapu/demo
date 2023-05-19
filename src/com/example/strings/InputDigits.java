@@ -21,9 +21,7 @@ public class InputDigits {
 			}
 		}
 		if (isNumber) {// false
-			System.out.println("The string contains only digits");
-		} else {// print
-			System.out.println("The string not contains only digits");
+			isNumber=true;
 		}
 		return isNumber;
 	}

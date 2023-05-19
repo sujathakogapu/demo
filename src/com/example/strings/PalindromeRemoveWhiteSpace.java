@@ -11,6 +11,7 @@ import java.util.Scanner;
 */
 public class PalindromeRemoveWhiteSpace {
 	public boolean isValidPalindrome(String inputStr) {
+		inputStr=inputStr.replace(" ", "");
 		String outputStr=" ";
 		boolean isPalindrome=false;
 		for (int i = inputStr.length() - 1; i >= 0; i--) {//m,o,m, ,i,h
@@ -25,7 +26,7 @@ public class PalindromeRemoveWhiteSpace {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter a string:");//hi mom 
 		String inputStr = scanner.nextLine();
-		inputStr=inputStr.replace(" ", "");
+		
 		scanner.close();
 		PalindromeRemoveWhiteSpace obj=new PalindromeRemoveWhiteSpace();
 		boolean output=obj.isValidPalindrome(inputStr);

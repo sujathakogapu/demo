@@ -1,6 +1,7 @@
 package com.example.strings;
 
 import java.util.Scanner;
+
 /*
 4.Write a program to check whether a string is a palindrome or not.
   Input:
@@ -9,18 +10,26 @@ import java.util.Scanner;
   The string is a palindrome.
 */
 public class PalindomeString {
+	public boolean isPalindrome(String inputStr) {
+		boolean isPalindrome = false;
+		String outputStr = "";
+		for (int i = inputStr.length() - 1; i >= 0; i--) {
+			outputStr = outputStr + inputStr.charAt(i);// m,a,d,a,m
+		}
+		if (inputStr.equals(outputStr)) {
+			isPalindrome = true;// madam.equals(madam)
+		}
+		return isPalindrome;
+	}
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Entr a String:");//madam
+		System.out.println("Entr a String:");// madam
 		String inputStr = scanner.nextLine();
-		String outputStr = "";
-		for (int i = inputStr.length() - 1;i>=0; i--) {
-			outputStr = outputStr + inputStr.charAt(i);//m,a,d,a,m
-		}
-		if (inputStr.equals(outputStr))//madam.equals(madam)
-			System.out.print("The string is a palindrome");//true
-		 else 
-			System.out.print("The string not a palindrome:");
+		PalindomeString obj = new PalindomeString();
+		boolean output = obj.isPalindrome(inputStr);
+		System.out.println("The string is a palindrome?: " + output);
+
 		scanner.close();
 	}
 
