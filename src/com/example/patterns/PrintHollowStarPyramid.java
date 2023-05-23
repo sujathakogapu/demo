@@ -13,10 +13,7 @@ package com.example.patterns;
 import java.util.Scanner;
 
 public class PrintHollowStarPyramid {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter a no of rows:");
-		int row = scanner.nextInt();
+	public void printHollowStarPyramid(int row) {
 		for (int i = 1; i <= row; i++) {//1,2,3,4,5
 			for (int j = 1; j <= row - i; j++)//1234,123,12,1
 			{
@@ -38,6 +35,13 @@ public class PrintHollowStarPyramid {
 			}
 			System.out.println();
 		}
+	}
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a no of rows:");
+		int row = scanner.nextInt();
+		PrintHollowStarPyramid obj=new PrintHollowStarPyramid();
+		obj.printHollowStarPyramid(row);
 		scanner.close();
 
 	}

@@ -3,10 +3,7 @@ package com.example.patterns;
 import java.util.Scanner;
 
 public class PalindromicNumberPyramid {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter a number:");
-		int row = scanner.nextInt();
+	public void printPalindromicPyramid(int row) {
 		for (int i = 1; i <= row; i++) {//12345
 			for (int j = i; j <= row; j++)//12345,2345,345,45,5
 				System.out.print(" ");
@@ -16,6 +13,13 @@ public class PalindromicNumberPyramid {
 				System.out.print(j + "");
 			System.out.println();
 		}
+	}
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a number:");
+		int row = scanner.nextInt();
+		PalindromicNumberPyramid obj=new PalindromicNumberPyramid();
+		obj.printPalindromicPyramid(row);
 		scanner.close();
 	}
 }

@@ -14,12 +14,13 @@ package com.example.patterns;
 import java.util.Scanner;
 
 public class DescendingOrderPattern {
-	public int getDescendingOrder(int row) {
+	public void getDescendingOrder(int row) {
 		for (int i = row; i >= 1; i--) {// 54321
 			for (int j = row; j >= i; j--) {
+				System.out.print("*");// 5,
+				System.out.println();
 			}
 		}
-		return row;
 	}
 
 	public static void main(String[] args) {
@@ -27,9 +28,7 @@ public class DescendingOrderPattern {
 		System.out.println("Enter a no of rows:");// 5
 		int row = scanner.nextInt();
 		DescendingOrderPattern obj = new DescendingOrderPattern();
-		int output= obj.getDescendingOrder(row);
-		System.out.print(output);// 5,
-		System.out.println();
+		obj.getDescendingOrder(row);
 		scanner.close();
 	}
 }
