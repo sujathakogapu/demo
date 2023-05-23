@@ -10,24 +10,36 @@ import java.util.Scanner;
     The area of the circle is: 78.54
 */
 public class Circle {
-	public double calArea(double radius) {
-		double area = (22 * radius * radius) / 7;
+	double radius = 0;//instance variable radius
+	public Circle(double radius) {//parameterized constructor
+		this.radius = radius;//assign value to the instance variable radius
+	}
+	
+	public double calArea() {
+		double area = (22 * this.radius * this.radius) / 7;
 		return area;
 	}
 
-	public double calCircumference(double radius) {
-		double circumference = (22 * radius) / 7;
+	public double calCircumference() {
+		double circumference = (22 * this.radius) / 7;
 		return circumference;
 	}
 
 	public static void main(String[] args) {
+		//user input
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter a radius of the circle:");// 5
 		double radius = scanner.nextDouble();
-		Circle circle = new Circle();
-		double area = circle.calArea(radius);
+		
+		//object creation and initialize the state/variables
+		Circle obj = new Circle(radius);//while object creation pass radius
+		
+		//calculate area
+		double area = obj.calArea();
 		System.out.println("Area of the circle is:" + area);// 78.54
-		double circumference = circle.calCircumference(radius);
+		
+		//calculate circumference
+		double circumference = obj.calCircumference();
 		System.out.println("The circumference of the circle: " + circumference);
 		scanner.close();
 	}

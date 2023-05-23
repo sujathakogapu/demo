@@ -1,4 +1,5 @@
 package com.example.basics;
+
 /*
 6.Write a program to calculate and print the average of three numbers.
   Input:
@@ -11,16 +12,22 @@ package com.example.basics;
 import java.util.Scanner;
 
 public class AverageCal {
+	public double getAverage(int num1, int num2, int num3) {
+		double average = (num1 + num2 + num3) / 3;
+		return average;
+	}
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the first number: ");// 4
-		float num1 = scanner.nextFloat();
+		int num1 = scanner.nextInt();
 		System.out.println("Enter the second number: ");// 7
-		float num2 = scanner.nextFloat();
+		int num2 = scanner.nextInt();
 		System.out.println("Enter the third number: ");// 2
-		float num3 = scanner.nextFloat();
-		float avrg = (num1 + num2 + num3) / 3;// (4+7+2)/3
-		System.out.println("Average of " + num1 + ", " + num2 + " and " + num3 + " is: " + avrg);
+		int num3 = scanner.nextInt();
+		AverageCal obj = new AverageCal();
+		double output = obj.getAverage(num1, num2, num3);
+		System.out.println("Average of " + num1 + ", " + num2 + " and " + num3 + " is: " + output);
 		scanner.close();
 	}
 }

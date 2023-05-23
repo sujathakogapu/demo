@@ -1,4 +1,5 @@
 package com.example.basics;
+
 /*
 22. Write a program to check if a given number is a palindrome or not.
     If the reverse of a number is the same as the original number, it is
@@ -18,22 +19,30 @@ package com.example.basics;
  */
 import java.util.Scanner;
 
-public class Palindome {
+public class Palindrome {
+	public boolean isPalindrome(int num) {
+		boolean isPalindrome = false;
+		int sum = 0, temp, reverse;
+		temp = num;
+		while (num > 0) {// 121>0
+			reverse = num % 10;// 1,2,1
+			sum = (sum * 10) + reverse;// 0+1,12,120+1
+			num = num / 10;// 12,1
+		}
+		if (temp == sum) {
+			isPalindrome = true;
+		}
+		return isPalindrome;
+	}
+
 	public static void main(String[] args) {
-		int reverce, sum = 0, temp;
+
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter a number:");
 		int num = scanner.nextInt();
-		temp = num;
-		while (num > 0) {//121>0
-			reverce = num % 10;// 1,2,1
-			sum = (sum * 10) + reverce;//0+1,12,120+1
-			num = num / 10;//12,1
-		}
-		if (temp == sum)
-			System.out.println("Given no is palindrome");
-		else
-			System.out.println("Given no is not palindome");
+		Palindrome obj = new Palindrome();
+		boolean output = obj.isPalindrome(num);
+		System.out.println(num + " is a palindrome? " + output);
 		scanner.close();
 	}
 

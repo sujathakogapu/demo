@@ -1,4 +1,5 @@
 package com.example.patterns;
+
 /*
 17. Print descending order pattern using nested loops.
     Input:
@@ -11,16 +12,24 @@ package com.example.patterns;
     5 4 3 2 1
 */
 import java.util.Scanner;
+
 public class DescendingOrderPattern {
+	public int getDescendingOrder(int row) {
+		for (int i = row; i >= 1; i--) {// 54321
+			for (int j = row; j >= i; j--) {
+			}
+		}
+		return row;
+	}
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter a no of rows:");//5
+		System.out.println("Enter a no of rows:");// 5
 		int row = scanner.nextInt();
-		for (int i = row; i >= 1; i--) {//54321
-			for (int j = row; j >= i; j--)//54321
-				System.out.print(j);//5,
-			System.out.println();
-		}
+		DescendingOrderPattern obj = new DescendingOrderPattern();
+		int output= obj.getDescendingOrder(row);
+		System.out.print(output);// 5,
+		System.out.println();
 		scanner.close();
 	}
 }

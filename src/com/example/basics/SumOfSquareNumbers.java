@@ -17,15 +17,21 @@ package com.example.basics;
 import java.util.Scanner;
 
 public class SumOfSquareNumbers {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter a number:");// 5->1,2,3,4,5->1+4+9+16+25
-		int num = scanner.nextInt();
+	public int getSumOfSquare(int num) {
 		int sum = 0;
 		for (int i = 0; i <= num; i++) {
 			sum = sum + (i * i);
 		}
-		System.out.println("Sum of Square sum is:" + sum);
+		return sum;
+	}
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a number:");// 5->1,2,3,4,5->1+4+9+16+25
+		int num = scanner.nextInt();
+		SumOfSquareNumbers obj = new SumOfSquareNumbers();
+		int output = obj.getSumOfSquare(num);
+		System.out.println("Sum of Square sum is:" + output);
 		scanner.close();
 	}
 }

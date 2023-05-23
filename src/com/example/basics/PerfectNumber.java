@@ -1,4 +1,5 @@
 package com.example.basics;
+
 /*
 25. Write a program to check if a given number is perfect or not.
     A perfect number is a positive integer whose sum of its proper positive
@@ -21,23 +22,31 @@ package com.example.basics;
     20 is not perfect
 */
 import java.util.Scanner;
+
 public class PerfectNumber {
-	public static void main(String[] args) {
-		long num, sum = 0;
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("Enter the number: ");//6
-		num = scanner.nextLong();
+	public boolean isPerfect(int num) {
+		boolean isPerfect = false;
+		int sum = 0;
 		int i = 1;
-		while (i <= num / 2) {//1,2,3
-			if (num % i == 0) {//6%1==0,6%2==0,6%3==0
-				sum = sum + i;//1,2,3
+		while (i <= num / 2) {// 1,2,3
+			if (num % i == 0) {// 6%1==0,6%2==0,6%3==0
+				sum = sum + i;// 1,2,3
 			}
 			i++;
 		}
 		if (sum == num) {
-			System.out.println(num + " is a perfect number.");
-		} else
-			System.out.println(num + " is not a perfect number.");
+			isPerfect = true;
+		}
+		return isPerfect;
+	}
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter the number: ");// 6
+		int num = scanner.nextInt();
+		PerfectNumber obj = new PerfectNumber();
+		boolean output = obj.isPerfect(num);
+		System.out.println(num + " is a perfect number? " + output);
 		scanner.close();
 	}
 

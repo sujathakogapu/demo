@@ -13,11 +13,7 @@ package com.example.patterns;
 import java.util.Scanner;
 
 public class Diamond {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Entera no of rows:");
-		int row = scanner.nextInt();
-		scanner.close();
+	public void printDiamondPattern(int row) {
 		for (int i = 1; i <= row; i++) {//1,2,3,4,5
 			for (int j = 1; j <= row - i; j++) {//1234,123,12,1
 				System.out.print(" ");
@@ -36,5 +32,13 @@ public class Diamond {
 			}
 			System.out.println();
 		}
+	}
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Entera no of rows:");
+		int row = scanner.nextInt();
+		scanner.close();
+		Diamond obj = new Diamond();
+		obj.printDiamondPattern(row);
 	}
 }

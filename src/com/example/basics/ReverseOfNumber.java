@@ -8,17 +8,23 @@ package com.example.basics;
 */
 import java.util.Scanner;
 public class ReverseOfNumber {
-	public static void main(String[] args) {
-		int reverse = 0, reminder;
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter a number:");//1234
-		int num = scanner.nextInt();
+	int reverse = 0, reminder;
+	public int getReverse(int num) {
 		while(num>0) {
 			reminder = num % 10;
 			reverse = reverse * 10 + reminder;
 			num=num/10;
 		}
-		System.out.println("the reverse of a given number is:" + reverse);
+		return reverse;
+	}
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a number:");//1234
+		int num = scanner.nextInt();
+		ReverseOfNumber obj=new ReverseOfNumber();
+		int output=obj.getReverse(num);
+		System.out.println("the reverse of a given number is:" + output);
 		scanner.close();
 	}
 }

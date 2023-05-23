@@ -32,22 +32,28 @@ import java.util.Scanner;
     152 is not an Armstrong number.
 */
 public class ArmstrongNumber {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("Enter a number:");//153
-		int num = scanner.nextInt();
+	public boolean isArmstrong(int num) {
+		boolean isArmstrong = false;
 		int temp = num;
 		int power = 0;
-		while (num > 0) {//153>0->true
-			int rem = num % 10;//153%10->3,5
-			power = power + (rem * rem * rem);//3*3*3,5*5*5,1*1*1
-			num = num / 10;//15/10->
+		while (num > 0) {// 153>0->true
+			int rem = num % 10;// 153%10->3,5
+			power = power + (rem * rem * rem);// 3*3*3,5*5*5,1*1*1
+			num = num / 10;// 15/10->
 		}
 		if (temp == power) {
-			System.out.println("Yes. It is Armstrong No.");
-		} else {
-			System.out.println("No. It is not an Armstrong No.");
+			isArmstrong = true;
 		}
+		return isArmstrong;
+	}
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter a number:");// 153
+		int num = scanner.nextInt();
+		ArmstrongNumber obj = new ArmstrongNumber();
+		boolean output = obj.isArmstrong(num);
+		System.out.println(num  + "is an Armstrong number?" + output);
 		scanner.close();
 	}
 }

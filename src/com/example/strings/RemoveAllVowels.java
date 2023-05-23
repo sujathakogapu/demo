@@ -1,6 +1,7 @@
 package com.example.strings;
 
 import java.util.Scanner;
+
 /*
 14. Write a program to remove all the vowels from a string.
     Input:
@@ -9,22 +10,25 @@ import java.util.Scanner;
     The string without vowels is: Hll Wrl
 */
 public class RemoveAllVowels {
-	public static void main (String[] args) {
+	public String removeVowels(String inputStr) {
+		for (int i = 0; i < inputStr.length(); i++) {
+			if (inputStr.charAt(i) == 'a' || inputStr.charAt(i) == 'e' || inputStr.charAt(i) == 'i'
+					|| inputStr.charAt(i) == 'o' || inputStr.charAt(i) == 'u' || inputStr.charAt(i) == 'A'
+					|| inputStr.charAt(i) == 'E' || inputStr.charAt(i) == 'I' || inputStr.charAt(i) == 'O'
+					|| inputStr.charAt(i) == 'U') {
+				inputStr = inputStr.replace(inputStr.charAt(i) + "", "");
+			}
+		}
+		return inputStr;
+	}
+
+	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Enter a sentence:");//HI hello
-		String inputStr=scanner.nextLine();
-		String outputStr=inputStr;
-		outputStr=outputStr.replace("a", "");//false
-		outputStr=outputStr.replace("e", "");//true->""->means remove the this vowel
-		outputStr=outputStr.replace("i", "");//false->small i
-		outputStr=outputStr.replace("o", "");//true->""
-		outputStr=outputStr.replace("u", "");//false
-		outputStr=outputStr.replace("A", "");//false
-		outputStr=outputStr.replace("E", "");//false->capital E
-		outputStr=outputStr.replace("I", "");//true->""
-		outputStr=outputStr.replace("O", "");//false->capital o
-		outputStr=outputStr.replace("U", "");//false->capital U
-		System.out.print("The string without vowels is:"+outputStr);
+		System.out.print("Enter a sentence:");// HI hello
+		String inputStr = scanner.nextLine();
+		RemoveAllVowels obj = new RemoveAllVowels();
+		String output = obj.removeVowels(inputStr);
+		System.out.println(output);
 		scanner.close();
 	}
 }

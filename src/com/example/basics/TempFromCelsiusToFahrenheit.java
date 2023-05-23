@@ -10,13 +10,19 @@ import java.util.Scanner;
     25°C is equal to 77°F.
 */
 public class TempFromCelsiusToFahrenheit {
+	public float getFahrenheit(float celsius) {
+		float fahrenheit = 0;
+		fahrenheit = ((celsius * 9) / 5) + 32;
+		return fahrenheit;
+	}
+
 	public static void main(String[] args) {
-		float fahrenheit;
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter the temperature in celsius:");//25
+		System.out.println("Enter the temperature in celsius:");// 25
 		float celsius = scanner.nextFloat();
-		fahrenheit =((celsius*9)/5)+32; 
-		System.out.println(fahrenheit+"F");
+		TempFromCelsiusToFahrenheit obj = new TempFromCelsiusToFahrenheit();
+		float output = obj.getFahrenheit(celsius);
+		System.out.println(output + "F");
 		scanner.close();
 	}
 }

@@ -3,11 +3,8 @@ package com.example.basics;
 import java.util.Scanner;
 
 public class SumOfNaturalNo {
-	public static void main(String[] args) {
-		int sum = 0;
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter a number:");
-		int num = scanner.nextInt();// num=5
+	public int getNaturalNumbersSum(int num) {
+		int sum=0;
 		int i = 1;
 		while (i <= num) {
 			// for (int i = 1; i <= num; i++) {//
@@ -15,7 +12,15 @@ public class SumOfNaturalNo {
 			sum = sum + i;
 			i++;// 0+1=1,1+2=3,3+3=6,6+4=10,10+5=15
 		}
-		System.out.println("The sum of natural no:" + sum);
+		return sum;
+	}
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a number:");
+		int num = scanner.nextInt();// num=5
+		SumOfNaturalNo obj=new SumOfNaturalNo();
+		int output=obj.getNaturalNumbersSum(num);
+		System.out.println("The sum of natural no:" + output);
 		scanner.close();
 
 	}

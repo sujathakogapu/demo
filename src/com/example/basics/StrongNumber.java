@@ -20,11 +20,9 @@ import java.util.Scanner;
     140 is not a strong number.
  */
 public class StrongNumber {
-	public static void main(String[] args) {
+	public boolean isStrongNumber(int num1) {
 		int num2 = 0, lastdigit, sumOfFact = 0, fact = 1;
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter a number:");//145
-		int num1 = scanner.nextInt();
+		boolean isStrongNumber=false;
 		num2=num1;//num2=145
 		while (num2 > 0) {//145>0->true
 			lastdigit = num2 % 10;//145%10=5,
@@ -35,11 +33,18 @@ public class StrongNumber {
 			num2 = num2 / 10;
 		}
 		if (num1 == sumOfFact) {
-			System.out.println(num1+" is a strong number:");
-		} else {
-
-			System.out.println(num1+" is not strong number:");
+			isStrongNumber=true;
 		}
+		return isStrongNumber;
+	}
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a number:");//145
+		int num1 = scanner.nextInt();
+		StrongNumber obj=new StrongNumber();
+		boolean output=obj.isStrongNumber(num1);
+		System.out.println(num1+" is a strong number? "+output);
 		scanner.close();
 
 	}

@@ -12,6 +12,17 @@ import java.util.Scanner;
   The largest number is: 9
  */
 public class LargestNumber {
+	int largestNumber=0;
+	public int getLargestNumber(int num1,int num2,int num3) {
+		if ((num1 > num2) && (num1 > num3)) {
+			largestNumber=num1;
+		} else if (num2 > num3) {
+			largestNumber=num2;
+		} else {
+			largestNumber=num3;
+		}
+		return largestNumber;
+	}
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the first number:");// 7
@@ -20,14 +31,9 @@ public class LargestNumber {
 		int num2 = scanner.nextInt();
 		System.out.println("Enter the third number:");// 9
 		int num3 = scanner.nextInt();
-		if ((num1 > num2) && (num1 > num3)) {// (7>4) && (7>9)
-			System.out.println("The largest number is: " + num1);// false
-		} else if (num2 > num3) {// 7>9
-			System.out.println("The largest number is: " + num2);// false
-
-		} else {
-			System.out.println("The largest number is: " + num3);// print
-		}
+		LargestNumber obj=new LargestNumber();
+		int output=obj.getLargestNumber(num1, num2, num3);
+			System.out.println("The largest number is: "+output);
 		scanner.close();
 	}
 }
