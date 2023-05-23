@@ -24,6 +24,9 @@ public class Circle {
 		double circumference = (22 * this.radius) / 7;
 		return circumference;
 	}
+	public double calDiameter() {
+		return 2*this.radius;
+	}
 
 	public static void main(String[] args) {
 		//user input
@@ -41,6 +44,8 @@ public class Circle {
 		//calculate circumference
 		double circumference = obj.calCircumference();
 		System.out.println("The circumference of the circle: " + circumference);
+		double diameter=obj.calDiameter();
+		System.out.println("The diameter of the circle is: "+diameter);
 		scanner.close();
 	}
 }
