@@ -6,10 +6,10 @@ import java.util.Scanner;
  * perimetr=a+b+c;
  * area=1/2*b*h;
  */
-public class TriAngle {
+public class Triangle {
 	double a, b, c, height = 0;
 
-	public TriAngle(double a, double b, double c, double height) {
+	public Triangle(double a, double b, double c, double height) {
 		this.a = a;
 		this.b = b;
 		this.c = c;
@@ -35,7 +35,7 @@ public class TriAngle {
 		System.out.println("Enter the height of the Triangle: ");
 		double height = scanner.nextDouble();
 		scanner.close();
-		TriAngle obj = new TriAngle(a, b, c, height);
+		Triangle obj = new Triangle(a, b, c, height);
 		double perimeter = obj.calPerimeter();
 		System.out.println("The perimeter of the triangle is: " + perimeter);
 		double area = obj.calArea();

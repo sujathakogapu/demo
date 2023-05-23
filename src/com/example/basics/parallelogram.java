@@ -6,10 +6,10 @@ import java.util.Scanner;
  * area=lh
  * perimeter=2l+2w
  */
-public class parallelogram {
+public class Parallelogram {
 	double length, width, height = 0;
 
-	public parallelogram(double length, double height, double width) {
+	public Parallelogram(double length, double height, double width) {
 		this.height = height;
 		this.length = length;
 		this.width = width;
@@ -33,7 +33,7 @@ public class parallelogram {
 		System.out.println("Enter the length of the parrallalogram: ");
 		double length = scanner.nextDouble();
 		scanner.close();
-		parallelogram obj = new parallelogram(height, width, length);
+		Parallelogram obj = new Parallelogram(height, width, length);
 		double area = obj.calArea();
 		System.out.println("The area of the parrallalogram: " + area);
 		double perimeter = obj.calPerimeter();
