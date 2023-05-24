@@ -14,7 +14,7 @@ package com.example.patterns;
 import java.util.Scanner;
 
 public class DescendingOrderPattern {
-	public void getDescendingOrder(int row) {
+	public void printDescendingOrder(int row) {
 		for (int i = row; i >= 1; i--) {// 54321
 			for (int j = row; j >= i; j--) {
 				System.out.print("*");// 5,
@@ -28,7 +28,7 @@ public class DescendingOrderPattern {
 		System.out.println("Enter a no of rows:");// 5
 		int row = scanner.nextInt();
 		DescendingOrderPattern obj = new DescendingOrderPattern();
-		obj.getDescendingOrder(row);
+		obj.printDescendingOrder(row);
 		scanner.close();
 	}
 }
