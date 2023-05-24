@@ -11,11 +11,13 @@ package com.example.arrays;
 import java.util.Scanner;
 
 public class DuplicateElements {
+	//method creation
 	int size=0;
 	public int[] removeDuplicates(int arr[]) {
 		size=arr.length;
 		for (int i = 0; i < size; i++) {
 			for (int j = i + 1; j < size; j++) {
+				//calculate the values and select duplicate elements
 				if (arr[i] == arr[j]) {
 					for (int k = j; k < size - 1; k++) {
 						arr[k] = arr[k + 1];
@@ -25,10 +27,12 @@ public class DuplicateElements {
 				}
 			}
 		}
+		//return value
 		return arr;
 	}
 
 	public static void main(String[] args) {
+		//get inputs from user
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the size of the array: ");
 		int length = scanner.nextInt();
@@ -39,7 +43,9 @@ public class DuplicateElements {
 		}
 
 		scanner.close();
+		//object creation
 		DuplicateElements elements = new DuplicateElements();
+		//method calling print output
 		int[] outputArray = elements.removeDuplicates(arr);
 		System.out.println("Array elements after deletion of the duplicate elements: ");
 		for (int i = 0; i < elements.size; i++) {

@@ -10,7 +10,21 @@ import java.util.Scanner;
   The minimum element is 5
 */
 public class MinmumOfArray {
+	//method creation
+	public int getMinimum(int[] arr) {
+		int min=arr[0];//min=10
+		//calculate the minimum element
+		for (int i = 0; i < arr.length; i++) {//0<5;1,1<5;2,2<5;3,3<5;4,4<5;5,5<5->false
+			if (arr[i] < min) {//10<10->false,5<10->true,20<5->false,25<5->false,15<5->false
+				//assign the minimum value
+				min = arr[i];//5,
+			}
+		}
+		//return the value
+		return min;
+	}
 	public static void main(String[] args) {
+		//get inputs from user
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter the length of the array:");//5
 		int length = scanner.nextInt();
@@ -19,13 +33,11 @@ public class MinmumOfArray {
 		for (int i = 0; i < arr.length; i++) {//0<5;1,1<5;2,2<5;3,3<5;4,4<5;5,5<5->false
 			arr[i] = scanner.nextInt();
 		}
-		int min=arr[0];//min=10
-		for (int i = 0; i < arr.length; i++) {//0<5;1,1<5;2,2<5;3,3<5;4,4<5;5,5<5->false
-			if (arr[i] < min) {//10<10->false,5<10->true,20<5->false,25<5->false,15<5->false
-				min = arr[i];//5,
-			}
-		}
-		System.out.println("the minimum no is:" + min);//5
+		//object creation
+		MinmumOfArray obj=new MinmumOfArray();
+		//method calling output print
+		int minimumElement=obj.getMinimum(arr);
+		System.out.println("the minimum no is:" + minimumElement);//5
 		scanner.close();
 	}
 

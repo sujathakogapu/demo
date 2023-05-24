@@ -10,9 +10,11 @@ import java.util.Scanner;
     The index of 30 is 2
 */
 public class SearchIndexElement {
+	//method creation
 	public int arrayEleSearch(int[] arr, int element) {
 		int index=-1;
 		int i = 0;
+		//check the search element and index
 		while (i < arr.length) {//0<5->true,1<5->true,2<5->true
 			if (arr[i] == element) {//10,20,30
 				index = i;//10,20,30
@@ -20,10 +22,11 @@ public class SearchIndexElement {
 			}
 			i++;//1+1=2
 		}
-
+		//return the value
 		return index;
 	}
 	public static void main(String[] args) {
+		//get inputs from user
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the size of the array :");//5
 		int length = scanner.nextInt();
@@ -34,7 +37,9 @@ public class SearchIndexElement {
 		}
 		System.out.print("Enter the search element:");//30
 		int element = scanner.nextInt();
+		//object creation
 		SearchIndexElement obj=new SearchIndexElement();
+		//method calling print the output
 		int output=obj.arrayEleSearch(arr, element);
 		System.out.println("Index of " + element + " is : " + output);//2
 		scanner.close();

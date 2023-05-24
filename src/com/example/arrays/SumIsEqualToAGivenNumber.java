@@ -13,10 +13,13 @@ import java.util.Scanner;
     Pair of integer array is: 4 10
 */
 public class SumIsEqualToAGivenNumber {
+	//method creation
 	public int[] getSumIsEqualToNumber(int[] arr, int sum) {
+		//array object creation
 		int[] output = new int[2];
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = i + 1; j < arr.length; j++) {
+				//compare the elements and sum
 				if (sum == arr[i] + arr[j]) {
 					output[0] = arr[i];
 					output[1] = arr[j];
@@ -24,9 +27,11 @@ public class SumIsEqualToAGivenNumber {
 				}
 			}
 		}
+		//return the value
 		return output;
 	}
 	public static void main(String[] args) {
+		//get input from user
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the size of the array: ");
 		int length = scanner.nextInt();
@@ -37,7 +42,9 @@ public class SumIsEqualToAGivenNumber {
 		}
 		System.out.println("Enter sum: ");
 		int sum = scanner.nextInt();
+		//object creation
 		SumIsEqualToAGivenNumber obj = new SumIsEqualToAGivenNumber();
+		//method calling and print the output
 		int[] output = obj.getSumIsEqualToNumber(arr, sum);
 		if (output[0]!=0 && output[1]!=0) {
 			System.out.println("pair of integer array is: " + output[0] + " " + output[1]);

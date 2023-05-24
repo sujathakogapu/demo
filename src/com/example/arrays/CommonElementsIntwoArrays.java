@@ -13,20 +13,25 @@ import java.util.Scanner;
     The common elements are: 3 4
 */
 public class CommonElementsIntwoArrays {
+	//method creation
 	int index=0;
 	public int[] getCommonElements(int arr1[], int arr2[]) {
+		//method body or logic array object creation
 		int[] commonElements = new int[arr1.length];
 		for (int i = 0; i < arr1.length; i++) {
 			for (int j = 0; j < arr2.length; j++)
+				//compare to two array elements
 				if (arr1[i] == arr2[j]) {
 					commonElements[index] = arr1[i];
 					index++;
 				}
 		}
+		//return value
 		return commonElements;
 	}
 
 	public static void main(String[] args) {
+		//get inputs from user
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the size of the 1st array:");
 		int length1 = scanner.nextInt();
@@ -42,7 +47,9 @@ public class CommonElementsIntwoArrays {
 		for (int j = 0; j < arr2.length; j++) {
 			arr2[j] = scanner.nextInt();
 		}
+		//object creation
 		CommonElementsIntwoArrays elements = new CommonElementsIntwoArrays();
+		//method calling and output print
 		int[] commonElementsArray = elements.getCommonElements(arr1, arr2);
 		System.out.print("common elements are: ");
 		for (int i = 0; i < elements.index; i++) {
