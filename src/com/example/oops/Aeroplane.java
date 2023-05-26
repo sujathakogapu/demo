@@ -1,7 +1,7 @@
 package com.example.oops;
 
 public class Aeroplane extends Vehicle {
-	public void drive() {
+	public void drive() {//same method and different behavior + inheritance-> dynamic polymorphism or method overriding
 		System.out.println("Taxiing the Aeroplane");
 	}
 
@@ -9,7 +9,7 @@ public class Aeroplane extends Vehicle {
 		Aeroplane obj = new Aeroplane();
 		obj.start();
 		obj.stop();
-		obj.drive();
+		obj.drive();//java run time polymorphism or dynamic polymorphism
 	}
 
 }
