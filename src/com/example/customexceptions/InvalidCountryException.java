@@ -1,8 +1,8 @@
 package com.example.customexceptions;
 
 public class InvalidCountryException extends Exception {
-	public InvalidCountryException(String countryname) {
-		super(countryname);
+	public InvalidCountryException(String message) {
+		super(message);
 	}
 
 }
