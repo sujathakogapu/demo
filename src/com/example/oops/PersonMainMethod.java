@@ -7,7 +7,7 @@ public class PersonMainMethod {
 		//Scanner scanner =new Scanner(System.in);
 		//System.out.println("Enter a name: ");
 		//String name=scanner.nextLine();
-		//System.out.println("Entera age: ");
+		//System.out.println("Enter a age: ");
 		//int age=scanner.nextInt();
 		Person obj = new Person();
 		//obj.setAge(25);

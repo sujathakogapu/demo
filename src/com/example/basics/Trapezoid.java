@@ -19,7 +19,7 @@ public class Trapezoid {
 	}
 
 	public double calPerimeter() {
-		return 1 / 2 *this.h(this.b1 + this.b2);
+		return (1 / 2) *this.h*(this.b1 + this.b2);//common sense is the rare sense
 	}
 
 

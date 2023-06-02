@@ -8,8 +8,8 @@ import java.util.Scanner;
  * if country is "India" then return Aadhar number
  */
 public class AadharAndValidateCountry {
-	public String getCountryName(String countryname) throws InvalidCountryException {
-		if (countryname != "India") {
+	public String getCountryName(String countryName) throws InvalidCountryException {
+		if (!countryName.equals("India")) {
 			throw new InvalidCountryException("Invalid country");
 		} else {
 			return "123456789A";
@@ -19,12 +19,12 @@ public class AadharAndValidateCountry {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter a country name: ");
-		String countryname = scanner.nextLine();
+		String countryName = scanner.nextLine();
 		scanner.close();
 		AadharAndValidateCountry obj = new AadharAndValidateCountry();
 		String output = null;
 		try {
-			output = obj.getCountryName(countryname);
+			output = obj.getCountryName(countryName);
 			System.out.println("country name: " + output);
 		} catch (InvalidCountryException ivc) {
 			System.out.println(ivc.getMessage());
