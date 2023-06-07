@@ -32,7 +32,7 @@ public class RemoveAllOccurrences {
 		ArrayList obj=new ArrayList();
 		System.out.println("Enter the array elements: ");
 		for(int i=0;i<size;i++) {
-			obj.add(scanner);
+			obj.add(scanner.nextInt());
 		}
 		System.out.println("Enter to remove: ");
 		int remove=scanner.nextInt();

@@ -13,13 +13,8 @@ import java.util.Scanner;
 
 public class AddElementAtEndInLInkedList {
 	public LinkedList addElementAtEnd(LinkedList list, int addElement) {
-		LinkedList list2=new LinkedList();
-		for(int i=0;i<list.size();i++) {
-			int ele=(int) list.get(i);
-			int output=ele.addLast(6);
-		}
-				
-		return output;
+		list.addLast(addElement);
+		return list;
 	}
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);

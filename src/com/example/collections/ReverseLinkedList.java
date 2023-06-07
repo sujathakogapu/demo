@@ -12,14 +12,11 @@ import java.util.Scanner;
 
 public class ReverseLinkedList {
 	public LinkedList getReverse(LinkedList list) {
-		//LinkedList list2=new LinkedList();
+		LinkedList list2=new LinkedList();
 		int reverse=0;
-		for(int i=0;i<list.size();i++) {
 			for(int j=list.size()-1;j>=0;j--) {
 			}
-			reverse=list(j);
-		}
-		return reverse;
+		return list2;
 	}
 	public static void main(String[] args) {
 	Scanner scanner=new Scanner(System.in);
@@ -30,5 +27,8 @@ public class ReverseLinkedList {
 	for(int i=0;i<size;i++) {
 		list.add(scanner.nextInt());
 }
+	ReverseLinkedList obj=new ReverseLinkedList();
+	LinkedList outputlist=obj.getReverse(list);
+	System.out.println("LinkedList after revers: "+outputlist);
 	}
 }

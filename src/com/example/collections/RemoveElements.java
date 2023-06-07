@@ -14,14 +14,13 @@ import java.util.Scanner;
 
 public class RemoveElements {
 	public LinkedList removeElementGreaterThan4(LinkedList list, int value) {
-		LinkedList list2=new LinkedList();
 		for(int i=0;i<list.size();i++) {
-			int list3=(int) list.get(i);
-			if(list3>value) {
-				int output=list.removeAll(c);
+			int element=(int) list.get(i);
+			if(element>value) {
+				list.remove(element);
 			}
 		}
-		return null;
+		return list;
 		
 	}
 	public static void main(String[] args) {
