@@ -13,26 +13,31 @@ import java.util.Scanner;
 public class PalindromeLinkedList {
 	public boolean isPalindrome(LinkedList list) {
 		boolean isPalindrome = false;
-		for(int i=0;i<list.size();i++) {
-			for(int j=list.size()-1;j>=0;j--) {
-				if(list(i)==list(j)) {
-					isPalindrome=true;
-				}
+		// LinkedList list2=new LinkedList();
+		int i = 0;
+		for (int j = list.size() - 1; j >= 0; j--) {
+			if (list(i) == list(j)) {
+				isPalindrome = true;
 			}
 		}
 		return isPalindrome;
 	}
-	public static void main(String[] args) {
-		Scanner scanner=new Scanner(System.in);
-		System.out.println("Enter a number of elements: ");
-		int size=scanner.nextInt();
-		LinkedList list=new LinkedList();
-		System.out.println("Enter a elements: ");
-		for(int i=0;i<size;i++) {
-			list.add(scanner.nextInt());
+
+	private Object list(int i) {
+		return null;
 	}
-		PalindromeLinkedList obj=new PalindromeLinkedList();
-		boolean list2=obj.isPalindrome(list);
-		System.out.println("It is palindrome: "+list2);
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a number of elements: ");
+		int size = scanner.nextInt();
+		LinkedList list = new LinkedList();
+		System.out.println("Enter a elements: ");
+		for (int i = 0; i < size; i++) {
+			list.add(scanner.nextInt());
+		}
+		PalindromeLinkedList obj = new PalindromeLinkedList();
+		boolean list2 = obj.isPalindrome(list);
+		System.out.println("It is palindrome: " + list2);
 	}
 }

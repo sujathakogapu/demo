@@ -12,12 +12,14 @@ import java.util.Scanner;
 
 public class ReverseLinkedList {
 	public LinkedList getReverse(LinkedList list) {
-		LinkedList list2=new LinkedList();
 		int reverse=0;
+		LinkedList list2=new LinkedList();
 			for(int j=list.size()-1;j>=0;j--) {
+				int val=(int)list.get(j);
+				list2.add(val);
 			}
 		return list2;
-	}
+			}
 	public static void main(String[] args) {
 	Scanner scanner=new Scanner(System.in);
 	System.out.println("Enter a number of elements: ");

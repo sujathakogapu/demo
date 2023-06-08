@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class ReplaceLinkedHashMap {
 	public HashMap replceValue(HashMap map ,char key, int value) {
 		HashMap map1=new HashMap();
-		map.replace('B',5);
+		map.replace(key,value);
 		
 		return map;
 	}

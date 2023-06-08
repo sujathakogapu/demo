@@ -4,16 +4,16 @@ import java.util.HashMap;
 
 public class MapDemo {
 	public static void main(String[] args) {
-		HashMap map = new HashMap();
+		HashMap<String, String> map = new HashMap<>();// don't use primitives,only use wrapper classes
 		map.put("mango", "Andhrapradesh");
 		map.put("orange", "maharastra");
 		map.put("banana", "karnataka");
 		map.put("apple", "kashmir");
 		System.out.println(map);
-		for (Object fruit : map.keySet()) {
-			// System.out.print(fruit+" ");
-			// System.out.print(map.get(fruit));
-			// System.out.println();
+		for (String fruit : map.keySet()) {
+			System.out.print(fruit + " ");
+			System.out.print(map.get(fruit));
+			System.out.println();
 		}
 		// System.out.println(map.get("apple"));
 		System.out.println("Removing banana: ");

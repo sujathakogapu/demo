@@ -12,7 +12,7 @@ import java.util.TreeSet;
 
 public class LargestElementInTreeSet {
 	public TreeSet largestElement(TreeSet set) {
-		set.higher(set);
+		set.last();
 		return set;
 	}
 	public static void main(String[] args) {

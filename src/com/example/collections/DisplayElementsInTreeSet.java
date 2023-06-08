@@ -13,12 +13,6 @@ TreeSet: [1, 2, 5, 7, 9]
  */
 
 public class DisplayElementsInTreeSet {
-	public TreeSet displayElements(TreeSet set) {
-		for(int i=0;i<set.size();i++) {
-			set.size();
-		}
-		return set;
-	}
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter asize of elements: ");
@@ -29,8 +23,7 @@ public class DisplayElementsInTreeSet {
 			set.add(scanner.nextInt());
 		}
 		DisplayElementsInTreeSet obj=new DisplayElementsInTreeSet();
-		TreeSet outputset=obj.displayElements(set);
-		System.out.println("TreeSet: "+outputset);
+		//System.out.println("TreeSet: "+outputset);
 	}
 
 }
