@@ -15,13 +15,13 @@ HashMap after removal: {banana=5, orange=8}
 
 public class SpecificPrefixHashMap {
 	public HashMap<String,Integer> getPrefixRemove(HashMap<String,Integer>map, String Prefix) {
-		Object key = null;
-			//for(int i=0;i<map.size();i++) {
+		for (String fruit : map.keySet()) {
+			String key = "";
 			int fruits= map.get(key);
 			if(Prefix==key) {
 				map.remove(key);
 			}
-			//}
+			}
 		return map;
 	}
 	public static void main(String[] args) {
