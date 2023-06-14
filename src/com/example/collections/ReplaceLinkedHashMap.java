@@ -11,17 +11,18 @@ LinkedHashMap after replacement: {A=1, B=5, C=3}
  */
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Scanner;
 
 public class ReplaceLinkedHashMap {
-	public HashMap replceValue(HashMap map ,char key, int value) {
-		HashMap map1=new HashMap();
+	public LinkedHashMap<Character,Integer> replceValue(LinkedHashMap<Character,Integer> map ,char key, int value) {
+		LinkedHashMap<Character,Integer> map1=new LinkedHashMap<>();
 		map.replace(key,value);
 		
 		return map;
 	}
 	public static void main(String[] args) {
-		HashMap map=new HashMap();
+		LinkedHashMap<Character,Integer> map=new LinkedHashMap<>();
 		Scanner scanner =new Scanner(System.in);
 		System.out.println("Enter key to replace: ");
 		//char key =scanner.nextChar();
@@ -32,7 +33,7 @@ public class ReplaceLinkedHashMap {
 		ReplaceLinkedHashMap obj=new ReplaceLinkedHashMap();
 		char key=0;
 		int value = 0;
-		HashMap outputMap=obj.replceValue(map,key, value);
+		LinkedHashMap<Character,Integer> outputMap=obj.replceValue(map,key, value);
 		System.out.println("LinkedHashMap after replacement: "+outputMap);
 	}
 

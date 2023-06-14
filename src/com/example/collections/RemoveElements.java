@@ -13,7 +13,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class RemoveElements {
-	public LinkedList removeElementGreaterThan4(LinkedList list, int value) {
+	public LinkedList<Integer> removeElementGreaterThan4(LinkedList<Integer> list, int value) {
 		for(int i=0;i<list.size();i++) {
 			int element=(int) list.get(i);
 			if(element>value) {
@@ -27,7 +27,7 @@ public class RemoveElements {
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Enter a number of elements: ");
 		int size=scanner.nextInt();
-		LinkedList list=new LinkedList();
+		LinkedList<Integer> list=new LinkedList<>();
 		System.out.println("Enter a elements: ");
 		for(int i=0;i<size;i++) {
 			list.add(scanner.nextInt());
@@ -35,7 +35,7 @@ public class RemoveElements {
 		System.out.println("Enter the value: ");
 		int value=scanner.nextInt();
 		RemoveElements obj=new RemoveElements();
-		LinkedList outputlist=obj.removeElementGreaterThan4(list, value);
+		LinkedList<Integer>outputlist=obj.removeElementGreaterThan4(list, value);
 		System.out.println(" LinkedList after removal: "+outputlist);
 		
 	}

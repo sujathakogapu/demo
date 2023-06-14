@@ -18,7 +18,7 @@ public class RemoveFirstElementInLinkedList {
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Enter a number of elements: ");
 		int size=scanner.nextInt();
-		LinkedList list=new LinkedList();
+		LinkedList<Integer> list=new LinkedList<>();
 		System.out.println("Enter a elements: ");
 		for(int i=0;i<size;i++) {
 			list.add(scanner.nextInt());

@@ -17,7 +17,7 @@ public class DisplayElementsInTreeSet {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter asize of elements: ");
 		int size=scanner.nextInt();
-		TreeSet set=new TreeSet();
+		TreeSet<Integer> set=new TreeSet<>();
 		System.out.println("Enter a elements: ");
 		for(int i=0;i<size;i++) {
 			set.add(scanner.nextInt());

@@ -12,7 +12,7 @@ import java.util.Scanner;
 import java.util.TreeSet;
 
 public class RemoveElementTreeSet {
-	public TreeSet removeElement(TreeSet set,String element) {
+	public TreeSet<String> removeElement(TreeSet<String> set,String element) {
 		set.remove(element);
 		return set;
 	}
@@ -20,7 +20,7 @@ public static void main(String[] args) {
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("Enter a number of strings");
 	int size = scanner.nextInt();
-	TreeSet set= new TreeSet();
+	TreeSet<String>set= new TreeSet<>();
 	scanner.nextLine();
 	System.out.println("Enter strings");
 	for (int i = 0; i < size; i++) {
@@ -29,7 +29,7 @@ public static void main(String[] args) {
 	System.out.println("Enter the remove string: ");
 	String element=scanner.nextLine();
 	RemoveElementTreeSet obj=new RemoveElementTreeSet();
-	TreeSet outputset=obj.removeElement(set, element);
+	TreeSet<String> outputset=obj.removeElement(set, element);
 	System.out.println("TreeSet after remove: "+outputset);
 }
 }

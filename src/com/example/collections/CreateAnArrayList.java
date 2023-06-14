@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class CreateAnArrayList {
 	public static void main(String[] args) {
-		ArrayList obj=new ArrayList();
+		ArrayList<Integer>obj=new ArrayList<>();
 		obj.add(1);
 		obj.add(5);
 		obj.add(10);

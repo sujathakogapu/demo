@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RemoveStrings {
-	public ArrayList removeStringsFromArrayList(ArrayList obj, int length) {
+	public ArrayList<String> removeStringsFromArrayList(ArrayList<String> obj, int length) {
 		for (int i = 0; i < obj.size(); i++) {
 			String str = (String) obj.get(i);
 			if (str.length() == length) {
@@ -27,7 +27,7 @@ public class RemoveStrings {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter a number of strings");
 		int size = scanner.nextInt();
-		ArrayList obj = new ArrayList();
+		ArrayList<String> obj = new ArrayList<>();
 		scanner.nextLine();
 		System.out.println("Enter strings");
 		for (int i = 0; i < size; i++) {
@@ -36,7 +36,7 @@ public class RemoveStrings {
 		System.out.println("Enter the length of the String to be remove");
 		int length=scanner.nextInt();
 		RemoveStrings rmstr=new RemoveStrings();
-		ArrayList strList=rmstr.removeStringsFromArrayList(obj,length);
+		ArrayList<String> strList=rmstr.removeStringsFromArrayList(obj,length);
 		System.out.println("ArrayList after removing strings with length "+length+":"+strList);
 		
 

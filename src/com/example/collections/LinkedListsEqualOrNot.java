@@ -14,7 +14,7 @@ LinkedHashSets are equal.
  */
 
 public class LinkedListsEqualOrNot {
-	public boolean isLinkedListsEquals(LinkedHashSet set1,LinkedHashSet set2) {
+	public boolean isLinkedListsEquals(LinkedHashSet<String> set1,LinkedHashSet<String> set2) {
 		 boolean value = set1.equals(set2);
 		return value;
 	}

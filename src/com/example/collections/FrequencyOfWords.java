@@ -1,6 +1,7 @@
 package com.example.collections;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Scanner;
 
 /*
@@ -19,17 +20,29 @@ Word frequency:
 
  */
 public class FrequencyOfWords {
+	public LinkedHashMap<String,Integer> getWordsFrequency(String str){
+		LinkedHashMap<String,Integer> linkedHashMap=new LinkedHashMap<>();
+		String[] words=str.split(" ");
+		for(String word:words) {
+			if(linkedHashMap.containsKey(word)) {
+				int count=linkedHashMap.get(word);
+				count++;
+				linkedHashMap.put(word,count);
+			}
+			else
+				linkedHashMap.put(word,1);
+		}
+		return linkedHashMap;
+	}
 	public static void main(String[] args) {
-		int[] freq = null;
 		Scanner scanner=new Scanner(System.in);
-		HashMap<String,Integer> map=new HashMap<>();
+		LinkedHashMap<String,Integer> map=new LinkedHashMap<>();
 		System.out.println("Enter a sentence: ");
-		String inputStr=scanner.nextLine();
-		String[] words = inputStr.split(" ");
-		for(int i=0;i<inputStr.length();i++) {
-			 freq[i]=1;
-			 }
-			 }
+		String str=scanner.nextLine();
+		FrequencyOfWords obj=new FrequencyOfWords();
+		LinkedHashMap<String,Integer> lmap=obj.getWordsFrequency(str);
+		System.out.println("Word frequency: "+lmap);
+	}
 		}
 		
 

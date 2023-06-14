@@ -16,7 +16,7 @@ ArrayList after replacing an with **:[Apple,B****a,M**go,Or**ge]
  */
 
 public class ReplaceSubString {
-	public ArrayList replaceSubStrings(ArrayList obj, String subStr, String newString) {
+	public ArrayList<String> replaceSubStrings(ArrayList<String> obj, String subStr, String newString) {
 		ArrayList outputStrings = new ArrayList();
 		for (int i = 0; i < obj.size(); i++) {
 			String val = (String) obj.get(i);
@@ -30,7 +30,7 @@ public class ReplaceSubString {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter a number of strings: ");
 		int size = scanner.nextInt();
-		ArrayList obj = new ArrayList();
+		ArrayList<String> obj = new ArrayList<>();
 		System.out.println("Enter a strings:");
 		String inputStr = scanner.nextLine();
 		for (int i = 0; i < size; i++) {
@@ -42,7 +42,7 @@ public class ReplaceSubString {
 		String newString = scanner.nextLine();
 		scanner.close();
 		ReplaceSubString rplsub = new ReplaceSubString();
-		ArrayList output = rplsub.replaceSubStrings(obj, subStr, newString);
+		ArrayList<String>output = rplsub.replaceSubStrings(obj, subStr, newString);
 		System.out.println(obj.size() + " " + output);
 	}
 

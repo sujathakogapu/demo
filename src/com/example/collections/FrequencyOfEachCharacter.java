@@ -19,30 +19,32 @@ Character frequency:
             
             
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Scanner;
 
 public class FrequencyOfEachCharacter {
-public static void main(String[] args) {
-	Scanner scanner=new Scanner(System.in);
-	HashMap<String,Integer> map=new HashMap<>();
-	System.out.println("Enter a string: ");
-	String str=scanner.nextLine();
-	int[] freq=new int[str.length()];
-	char String[]=str.toCharArray();
-	for(int i=0;i<str.length();i++) {
-		freq[i]=1;
-		for(int j=i+1;j<str.length();j++) {
-			if(String[i]==String[j]) {
-				freq[i]++;
+		public LinkedHashMap<Character, Integer> charCountFrequency(String Str,LinkedHashMap<Character, Integer>charFreqMap) {
+			for (int i = 0; i < Str.length(); i++) {
+				Character ch = Str.charAt(i);
+				if (charFreqMap.containsKey(ch)) {
+					int count = charFreqMap.get(ch);
+					charFreqMap.put(ch, count + 1);
+				} else {
+					charFreqMap.put(ch, 1);
+				}
 			}
-			String[j]='0';
-			
+			return charFreqMap;
 		}
+
+		public static void main(String[] args) {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Enter a string:");
+			String Str = sc.nextLine();
+			LinkedHashMap<Character,Integer> charFreqMap=new LinkedHashMap<>();
+			FrequencyOfEachCharacter Obj = new FrequencyOfEachCharacter();
+			LinkedHashMap<Character, Integer> Output = Obj.charCountFrequency(Str,charFreqMap);
+			System.out.println("Character frequency:"+ charFreqMap);
+			sc.close();
+		}
+
 	}
-System.out.println("frequency chars: ");
-for(int i=0;i<freq.length;i++) {
-	if(String[i]!=' '&& String[i]!='0')
-		System.out.println(String[i]+"-"+freq[i]);
-}
-}
-}

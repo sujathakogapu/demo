@@ -43,10 +43,10 @@ public class AnagramsHashMap {
 		String str1=scanner.nextLine();
 		System.out.println("Enter a second string: ");
 		String str2=scanner.nextLine();
-		HashMap <String> map1=new HashMap<>();
+		HashMap <String,> map1=new HashMap<>();
 		HashMap <String> map2=new HashMap<>();
 		for(Character c:str1.toCharArray()) {
-			map1.add(c);
+			map1.putA(c);
 		}
 		for(Character c:str2.toCharArray()) {
 			map2.add(c);

@@ -14,20 +14,20 @@ import java.util.Scanner;
 */
 
 public class MaxMinElements {
-	public ArrayList getMaxMin(ArrayList obj, int size) {
-		ArrayList output = new ArrayList();
+	public ArrayList<Integer> getMaxMin(ArrayList<Integer>obj, int size) {
+		ArrayList<Integer> output = new ArrayList<>();
 
 		int max = (int) obj.get(0);
 		int min = (int) obj.get(0);
 		int elements = obj.size();
 		for (int i = 0; i < size; i++) {
-			int val = (int) obj.get(i);
+			int val = obj.get(i);
 			if (val < min) {
 				min = val;
 			}
 		}
 		for (int i = 0; i < size; i++) {
-			int maxval = (int) obj.get(i);
+			int maxval =  obj.get(i);
 			if (maxval > max) {
 				max = maxval;
 			}
@@ -41,13 +41,13 @@ public class MaxMinElements {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter a number of elements: ");
 		int size = scanner.nextInt();
-		ArrayList obj = new ArrayList();
+		ArrayList<Integer>obj = new ArrayList<>();
 		System.out.println("Enter the array elements: ");
 		for (int i = 0; i < size; i++) {
 			obj.add(scanner.nextInt());
 		}
 		MaxMinElements maxmin = new MaxMinElements();
-		ArrayList output = maxmin.getMaxMin(obj, size);
+		ArrayList<Integer> output = maxmin.getMaxMin(obj, size);
 		System.out.println("maximum: " + output.get(1));
 		System.out.println("minimum: " + output.get(0));
         System.out.println(output.size());

@@ -13,13 +13,13 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Intersection {
-	public HashMap getIntersection(int[] arr1,int[] arr2) {
-		HashMap map=new HashMap();
+	public HashMap<Integer,Integer>getIntersection(int[] arr1,int[] arr2) {
+		HashMap<Integer,Integer> map=new HashMap<>();
 		for(int i=0;i<arr1.length;i++) {
 			for(int j=0;j<arr2.length;j++) {
 				if(arr1[i]==arr2[j]) {
 					j++;
-					map=(HashMap) map.get(j);
+					map=map.get(j);
 				}
 				
 			}
@@ -30,7 +30,7 @@ public class Intersection {
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Enter a no of elements: ");
 		int size=scanner.nextInt();
-		HashMap map=new HashMap();
+		HashMap<Integer,Integer> map=new HashMap<>();
 		System.out.println("Enter first array elements: ");
 		int[] arr1=new int[size];
 		for(int i=0;i<size;i++) {
@@ -42,7 +42,7 @@ public class Intersection {
 			arr2[i]=scanner.nextInt();
 		}
 		Intersection obj=new Intersection();
-		HashMap outputmap=obj.getIntersection(arr1, arr2);
+		HashMap<Integer,Integer> outputmap=obj.getIntersection(arr1, arr2);
 		System.out.println(map);
 		
 	}

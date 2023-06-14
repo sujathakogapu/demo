@@ -16,7 +16,7 @@ public class LargestElementInTreeSet {
 		return set;
 	}
 	public static void main(String[] args) {
-		TreeSet set=new TreeSet();
+		TreeSet<Integer> set=new TreeSet<>();
 		set.add(3);
 		set.add(1);
 		set.add(4);
@@ -24,7 +24,7 @@ public class LargestElementInTreeSet {
 		set.add(5);
 		System.out.println(set);
 		LargestElementInTreeSet obj=new LargestElementInTreeSet();
-		TreeSet outputSet=obj.largestElement(set);
+		TreeSet<Integer> outputSet=obj.largestElement(set);
 		System.out.println("Largest element: "+outputSet);
 	}
 

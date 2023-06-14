@@ -15,7 +15,7 @@ import java.util.Scanner;
 */
 
 public class RemoveAllOccurrences {
-	public ArrayList removeOccurrencesElements(ArrayList obj,int size) {
+	public ArrayList<Integer> removeOccurrencesElements(ArrayList<Integer> obj,int size) {
 		//int elements=obj.size();
 		//int removeElement=30;
 		for(int i=0;i<obj.size();i++) {
@@ -29,7 +29,7 @@ public class RemoveAllOccurrences {
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Enter the number of elements: ");
 		int size=scanner.nextInt();
-		ArrayList obj=new ArrayList();
+		ArrayList<Integer> obj=new ArrayList<>();
 		System.out.println("Enter the array elements: ");
 		for(int i=0;i<size;i++) {
 			obj.add(scanner.nextInt());
@@ -38,7 +38,7 @@ public class RemoveAllOccurrences {
 		int remove=scanner.nextInt();
 		scanner.close();
 		RemoveAllOccurrences rmao=new RemoveAllOccurrences();
-		ArrayList afterRemove=rmao.removeOccurrencesElements(obj, size);
+		ArrayList<Integer>afterRemove=rmao.removeOccurrencesElements(obj, size);
 		System.out.println("ArrayList after removing all occurrences of element 30:"+afterRemove);
 	}
 

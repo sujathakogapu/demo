@@ -15,7 +15,7 @@ Element Python exists in LinkedHashSet.
  */
 
 public class SpecificElementExistsInLinkedList {
-	public LinkedHashSet existsElement(LinkedHashSet<String> set,String existEle) {
+	public LinkedHashSet<String>existsElement(LinkedHashSet<String> set,String existEle) {
 		LinkedHashSet<String> sets=new LinkedHashSet<>();
 		for(int i=0;i<sets.size();i++) {
 			String element= sets.get(i);
