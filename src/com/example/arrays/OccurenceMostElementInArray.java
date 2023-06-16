@@ -11,6 +11,8 @@ import java.util.Scanner;
     Output:
     Element: 1, Occurrences: 3
  */
+//time complexity:64
+//space complexity:8
 public class OccurenceMostElementInArray {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);

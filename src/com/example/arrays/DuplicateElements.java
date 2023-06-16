@@ -8,6 +8,8 @@ package com.example.arrays;
     Output:
     1 2 3 4 5
 */
+//Time complexity:8*8*8
+//Space complexity:8
 import java.util.Scanner;
 
 public class DuplicateElements {

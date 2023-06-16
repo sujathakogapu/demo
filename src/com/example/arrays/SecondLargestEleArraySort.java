@@ -10,6 +10,8 @@ import java.util.Scanner;
   Output:
   The second largest element is 20
 */
+//time complexity:3
+//space complexity:5
 public class SecondLargestEleArraySort {
 	//method creation
 	public int getSecondLargestElement(int[] arr) {

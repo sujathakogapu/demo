@@ -10,6 +10,8 @@ import java.util.Scanner;
    Output:
    The maximum element is 25
 */
+//time complexity:5
+//space complexity:5
 public class MaximumOfArray {
 	//method creation
 	public int getMaximum(int[] arr) {

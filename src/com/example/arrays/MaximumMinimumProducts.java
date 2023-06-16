@@ -12,6 +12,8 @@ import java.util.Scanner;
     Output:
     Maximum product: 30, Minimum product: 2
 */
+//Time complexity:5
+//Space complexity:5
 public class MaximumMinimumProducts {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);

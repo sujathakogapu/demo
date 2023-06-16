@@ -1,5 +1,7 @@
 package com.example.arrays;
 //example program array creation
+//Time Complexity: 5
+//Space complexity: 5
 public class ArrayCreation {
 	public static void main(String[] args) {
 		int i;

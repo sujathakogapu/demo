@@ -10,6 +10,8 @@ import java.util.Scanner;
   Output:
   Even numbers = 2, Odd numbers = 3
 */
+//Time complexity:5
+//Space complexity:5
 public class EvenOddNumberInArray {
 	//method creation
 	public int evenOdd(int[] arr) {

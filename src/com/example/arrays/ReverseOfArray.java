@@ -10,17 +10,22 @@ import java.util.Scanner;
   Output:
   5 4 3 2 1
 */
+//time complexity:5
+//space complexity:5
 public class ReverseOfArray {
 	//method creation
 	public int[] arrayReverce(int[] arr) {
 		int reverse=0;
+		int[] outputArr=new int[arr.length];
 		//check the reverse elements
+		int i=0;
 		for (int j = arr.length-1; j >= 0;j--) {//4;4>=0;3,3>=0;2,2>=0,1,1>=0;0,0>=0
 			//assign the elements to reverse variable
-			reverse=arr[j];//5,4,3,2,1
+			outputArr[i]=arr[j];
+			i++;
 		}
 		//return the value
-		return arr;
+		return outputArr;
 	}
 	public static void main(String[] args) {
 		//get input from user
@@ -36,7 +41,9 @@ public class ReverseOfArray {
 		ReverseOfArray obj=new ReverseOfArray();
 		//method calling and print the output
 		int[] output=obj.arrayReverce(arr);
-		System.out.println("The reverse of array is: "+output);
+		for(int i=0;i<output.length;i++) {
+		System.out.print(output[i]+" ");
+		}
 		scanner.close();
 	}
 }

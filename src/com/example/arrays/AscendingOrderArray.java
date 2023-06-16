@@ -10,6 +10,9 @@ import java.util.Scanner;
   Output:
   True
 */
+//Time complexity:5
+//space complexity:5
+
 public class AscendingOrderArray {
 	//step1:-method creation
 	public boolean isAscending(int arr[], int length) {
