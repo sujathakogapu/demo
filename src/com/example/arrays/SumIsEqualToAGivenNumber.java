@@ -12,8 +12,8 @@ import java.util.Scanner;
     Output:
     Pair of integer array is: 4 10
 */
-//time complexity:16
-//space complexity:4
+//time complexity:O(n*n)
+//space complexity:O(n)
 public class SumIsEqualToAGivenNumber {
 	//method creation
 	public int[] getSumIsEqualToNumber(int[] arr, int sum) {

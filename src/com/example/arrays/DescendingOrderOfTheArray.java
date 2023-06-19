@@ -10,8 +10,8 @@ import java.util.Scanner;
     Output:
     Array in descending order: 25 20 15 10 5
 */
-//time complexity:25
-//space complexity:5
+//time complexity:O(n*n)
+//space complexity:O(n)
 public class DescendingOrderOfTheArray {
 	//method creation
 	public int[] applyDescendingOrder(int arr[]) {

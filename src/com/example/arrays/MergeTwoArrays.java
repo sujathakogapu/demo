@@ -12,8 +12,8 @@ import java.util.Scanner;
     Output:
     Merged array: 1 2 3 4 5 6
 */
-//time complexity:6
-//space complexity:6
+//time complexity:O(n)
+//space complexity:O(n)
 public class MergeTwoArrays {
 	//method creation
 	public int[] getMerge(int[] arr1,int[] arr2) {

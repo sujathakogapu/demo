@@ -11,8 +11,8 @@ import java.util.Scanner;
     Output:
     The element 3 occurs 2 times in the array
  */
-//time complexity:6
-//space complexity:6
+//time complexity:O(n)
+//space complexity:O(n)
 public class NumberOccurrences {
 	//method creation
 	public int numberOccurrencesEle(int[] arr){

@@ -9,8 +9,8 @@ import java.util.Scanner;
   Output:
   The minimum element is 5
 */
-//time complexity:5
-//space complexity:5
+//time complexity:O(n)
+//space complexity:O(n)
 public class MinmumOfArray {
 	//method creation
 	public int getMinimum(int[] arr) {

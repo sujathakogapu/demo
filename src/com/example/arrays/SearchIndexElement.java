@@ -9,6 +9,8 @@ import java.util.Scanner;
     Output:
     The index of 30 is 2
 */
+//time complexity:O(n)
+//space complexity:O(n)
 public class SearchIndexElement {
 	//method creation
 	public int arrayEleSearch(int[] arr, int element) {

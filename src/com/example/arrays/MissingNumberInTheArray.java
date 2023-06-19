@@ -12,6 +12,8 @@ import java.util.Scanner;
     Output:
     The missing number is 5
 */
+//time complexity:O(n)
+//space complexity:O(n)
 public class MissingNumberInTheArray {
 	//method creation
 	public int getMissingNumber(int[] arr, int number) {

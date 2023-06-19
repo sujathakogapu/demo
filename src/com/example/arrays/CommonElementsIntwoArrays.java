@@ -12,8 +12,8 @@ import java.util.Scanner;
     Output:
     The common elements are: 3 4
 */
-//time complexity:25
-//space complexity:5
+//time complexity:O(n*n)
+//space complexity:O(n)
 public class CommonElementsIntwoArrays {
 	//method creation
 	int index=0;

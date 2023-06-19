@@ -12,8 +12,8 @@ import java.util.Scanner;
     1 occurs 3 times, 2 occurs 2 times, 3 occurs 1 time, 4 occurs 1 time, 5
     occurs 1 time
 */
-//Time complexity:64
-//Space complexity:8
+//Time complexity:O(n*n)
+//Space complexity:O(n)
 public class FrequencyOfElementInArray {
 	//method creation
 	public String[] getFrequency(int[] arr) {

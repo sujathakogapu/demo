@@ -10,6 +10,8 @@ import java.util.Scanner;
   Output:
   The sum of all elements in the array is 15
 */
+//time complexity:O(n)
+//space complexity:O(n)
 public class SumOfArray {
 	//method creation
 	public int arraySum(int[] arr) {

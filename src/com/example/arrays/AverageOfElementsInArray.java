@@ -10,8 +10,8 @@ import java.util.Scanner;
   Output:
   The average of all elements in array is 30.0
 */
-//time complexity:5
-//space complexity:5
+//time complexity:O(n)
+//space complexity:O(n)
 public class AverageOfElementsInArray {
 	//method creation
 	public double average(int arr[], int length) {

@@ -11,8 +11,8 @@ import java.util.Scanner;
     Output:
     33
 */
-//time complexity:10
-//space complexity:10
+//time complexity:O(n)
+//space complexity:O(n)
 public class SumOfElementsDivisibleByN {
 	//method creation
 	public int getSumOfElementsdivisibleByN(int[] arr) {

@@ -10,8 +10,8 @@ import java.util.Scanner;
   Output:
   5 4 3 2 1
 */
-//time complexity:5
-//space complexity:5
+//time complexity:O(n)
+//space complexity:O(n)
 public class ReverseOfArray {
 	//method creation
 	public int[] arrayReverce(int[] arr) {
