@@ -12,7 +12,7 @@ Put the Student objects as keys in hashmap and print them using for each loop
  In the Student class add an instance variable gpa(double) and implement Comparable interface to compare gpa's.
   Create a Arraylist of students and sort them using Collections.sort() method.
 */
-public class StudentDetails {
+public class StudentDetails implements Comparable<StudentDetails>  {
 	private String studentId;
 	private String studentName;
 	private double studentGPA;
@@ -79,8 +79,8 @@ public class StudentDetails {
 		students.add(student1);
 		students.add(student2);
 		System.out.println("Before collection sort students gpas: " + students);
-		//Collections.sort( (List<T>) students);
+		Collections.sort(students);
+		//Collections.sort(employee);
 		System.out.println("After collection sort students gpas: " + students);
 	}
-
 }
