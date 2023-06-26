@@ -23,6 +23,37 @@ public class StudentDetails implements Comparable<StudentDetails>  {
 		this.studentGPA = studentGPA;
 	}
 
+	
+	public String getStudentId() {
+		return studentId;
+	}
+
+
+	public void setStudentId(String studentId) {
+		this.studentId = studentId;
+	}
+
+
+	public String getStudentName() {
+		return studentName;
+	}
+
+
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+
+
+	public double getStudentGPA() {
+		return studentGPA;
+	}
+
+
+	public void setStudentGPA(double studentGPA) {
+		this.studentGPA = studentGPA;
+	}
+
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {
@@ -79,8 +110,9 @@ public class StudentDetails implements Comparable<StudentDetails>  {
 		students.add(student1);
 		students.add(student2);
 		System.out.println("Before collection sort students gpas: " + students);
-		Collections.sort(students);
-		//Collections.sort(employee);
+		//Collections.sort(students);
+		//Collections.sort(students,new StudentIDComparator());
+		Collections.sort(students, new StudentNameComparator());
 		System.out.println("After collection sort students gpas: " + students);
 	}
 }

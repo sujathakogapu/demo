@@ -21,6 +21,44 @@ public class Employee implements Comparable<Employee> {
 		this.name = name;
 		this.salary = salary;
 	}
+	
+	
+
+	public String getEmployeeId() {
+		return employeeId;
+	}
+
+
+
+	public void setEmployeeId(String employeeId) {
+		this.employeeId = employeeId;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public float getSalary() {
+		return salary;
+	}
+
+
+
+	public void setSalary(float salary) {
+		this.salary = salary;
+	}
+
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -77,7 +115,9 @@ public class Employee implements Comparable<Employee> {
 		employee.add(emp1);
 		employee.add(emp2);
 		System.out.println("Before collection sort employee salaries: " + employee);
-		Collections.sort(employee);
+		//Collections.sort(employee);
+		Collections.sort(employee,new EmployeeIDComparator());
+		//Collections.sort(employee, new EmployeeNameComparator());
 		System.out.println("After collection sort employee salaries: " + employee);
 	}
 
