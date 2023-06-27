@@ -95,7 +95,6 @@ public class StudentDetails implements Comparable<StudentDetails>  {
 
 
 	public static void main(String[] args) {
-		ArrayList<StudentDetails> students=new ArrayList<>();
 		StudentDetails student1=new StudentDetails("12345","sujatha",  10.55);
 		StudentDetails student2=new StudentDetails("123456","Shiva",  5.55);
 		int compare=student1.compareTo(student2);
@@ -107,12 +106,6 @@ public class StudentDetails implements Comparable<StudentDetails>  {
 		else {
 			System.out.println(student1.studentName + " and  "+ student2.studentName+ " have the same GPA");
 		}
-		students.add(student1);
-		students.add(student2);
-		System.out.println("Before collection sort students gpas: " + students);
-		//Collections.sort(students);
-		//Collections.sort(students,new StudentIDComparator());
-		Collections.sort(students, new StudentNameComparator());
-		System.out.println("After collection sort students gpas: " + students);
+		
 	}
 }
