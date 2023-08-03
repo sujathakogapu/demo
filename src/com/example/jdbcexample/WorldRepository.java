@@ -19,6 +19,7 @@ public class WorldRepository {
 			statement = connection.createStatement();
 			// step4:execute the query
 			rs = statement.executeQuery("select * from city");
+			//String sqlQuery = "select * from countries_population_info_vw";
 			// step5:process result set
 			while (rs.next()) {
 				int cityId = rs.getInt("Id");
@@ -143,10 +144,10 @@ public class WorldRepository {
 
 	public static void main(String[] args) {
 		WorldRepository obj = new WorldRepository();
-		// obj.printCityTable();
+		obj.printCityTable();
 		// obj.insertCityTable();
 		// obj.updateCityTable();
-		obj.deleteCityTable();
+		//obj.deleteCityTable();
 
 	}
 
