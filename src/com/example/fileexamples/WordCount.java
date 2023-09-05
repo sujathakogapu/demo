@@ -17,7 +17,7 @@ public class WordCount {
 			String poem = " ";
 			StringBuilder text = new StringBuilder();
 
-			while ((poem = br.readLine()) != null) {
+			while ((poem = br.readLine()) != null) {//reads each line from file using br and appends to StringBuilder named text
 				text.append(poem).append("\n");
 				// System.out.println(poem);
 			}
@@ -31,11 +31,6 @@ public class WordCount {
 					wordFrequency.put(word, wordFrequency.getOrDefault(word, 0) + 1);
 				}
 			}
-
-			// Print word frequency count
-			// for (Map.Entry<String, Integer> entry : wordFrequency.entrySet()) {
-			// System.out.println(entry.getKey() + ": " + entry.getValue());
-			// }
 
 			// user to enter a word
 			Scanner scanner = new Scanner(System.in);

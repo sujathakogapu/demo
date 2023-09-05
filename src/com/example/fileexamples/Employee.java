@@ -10,19 +10,16 @@ public class Employee {
         employees = new ArrayList<>();
     }
 
-    public List<EmployeeDetails> getEmployee() {
+    public List<EmployeeDetails> getEmployees() {
         return employees;
     }
 
-    public void setEmployee(List<EmployeeDetails> employee) {
-        this.employees = employee;
+    public void setEmployees(List<EmployeeDetails> employees) {
+        this.employees = employees;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee [employees=" + employees + "]";
     }
 }
-
-
-
-
-
-
-
-

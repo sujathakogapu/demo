@@ -4,10 +4,10 @@ public class LibraryBookDetails {
     private int bookId;
     private String title;
     private String author;
-    private String publication_year;
+    private String publicationYear;
     private String isbn;
     private String genre;
-    private String copies_available;
+    private String copiesAvailable;
 
     public int getBookId() {
         return bookId;
@@ -33,12 +33,12 @@ public class LibraryBookDetails {
         this.author = author;
     }
 
-    public String getPublication_year() {
-        return publication_year;
+    public String getPublicationYear() {
+        return publicationYear;
     }
 
-    public void setPublication_year(String publication_year) {
-        this.publication_year = publication_year;
+    public void setPublicationYear(String publicationYear) {
+        this.publicationYear = publicationYear;
     }
 
     public String getIsbn() {
@@ -57,11 +57,11 @@ public class LibraryBookDetails {
         this.genre = genre;
     }
 
-    public String getCopies_available() {
-        return copies_available;
+    public String getCopiesAvailable() {
+        return copiesAvailable;
     }
 
-    public void setCopies_available(String copies_available) {
-        this.copies_available = copies_available;
+    public void setCopiesAvailable(String copiesAvailable) {
+        this.copiesAvailable = copiesAvailable;
     }
 }

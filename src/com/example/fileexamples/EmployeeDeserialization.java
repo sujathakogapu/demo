@@ -24,7 +24,7 @@ public class EmployeeDeserialization {
             Employee emp = gson.fromJson(json, Employee.class);
 
             // Iterate over the list of employees and print their details
-            for (EmployeeDetails newEmp : emp.getEmployee()) {
+            for (EmployeeDetails newEmp : emp.getEmployees()) {
                 System.out.println("ID: " + newEmp.getId());
                 System.out.println("First Name: " + newEmp.getFirstName());
                 System.out.println("Last Name: " + newEmp.getLastName());

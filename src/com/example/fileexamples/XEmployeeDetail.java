@@ -85,9 +85,10 @@ public class XEmployeeDetail {
 				+ ", getSalary()=" + getSalary() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
 				+ ", toString()=" + super.toString() + "]";
 	}
-	
-	
+
+	public void add(ConvertEmployeeToJavaObject employee) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
-
-	

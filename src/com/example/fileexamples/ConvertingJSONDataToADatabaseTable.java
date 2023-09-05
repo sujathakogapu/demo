@@ -40,7 +40,7 @@ public class ConvertingJSONDataToADatabaseTable {
                 String insertSql = "INSERT INTO employees (id, first_name, last_name, position, department, salary) VALUES (?, ?, ?, ?, ?, ?)";
                 PreparedStatement preparedStatement = connection.prepareStatement(insertSql);
 
-                for (EmployeeDetails employee : emp.getEmployee()) {
+                for (EmployeeDetails employee : emp.getEmployees()) {
                 	System.out.println(employee);
                     preparedStatement.setInt(1, employee.getId());
                     preparedStatement.setString(2, employee.getFirstName());
@@ -54,7 +54,7 @@ public class ConvertingJSONDataToADatabaseTable {
 
                 preparedStatement.close();
                 //connection.commit(); // Commit the transaction
-                if(!emp.getEmployee().isEmpty()) {
+                if(!emp.getEmployees().isEmpty()) {
                 	System.out.println("Employees inserted successfully.");
                 } else{
                 	System.out.println("list is empty");

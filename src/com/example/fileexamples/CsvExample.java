@@ -1,7 +1,6 @@
 
 package com.example.fileexamples;
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -24,7 +23,10 @@ public class CsvExample {
 		sc.close();
 
 		readCsv(csvFile);
-		writeCsv(csvFile, "sujatha", 26, "hyderabad");
+		String name="sujatha";
+		int age=26;
+		String location="hyderabad";
+		writeCsv(csvFile,name,age,location);
 		countOccurrences(csvFile, "sujatha");
 		findAndReplace(csvFile, actual, replace);
 		countLines(csvFile);
@@ -52,10 +54,9 @@ public class CsvExample {
 
 	public static void writeCsv(String csvFile, String name, int age, String location) {
 		try (CSVWriter writer = new CSVWriter(new FileWriter(csvFile, true))) {
-			String[] record = { name, Integer.toString(age), location };
-			writer.writeNext(record);
-			System.out.println("Record added successfully to CSV.");
-		} catch (IOException e) {
+            String[] record = {name, String.valueOf(age), location};
+            writer.writeNext(record);
+        } catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
@@ -107,16 +108,19 @@ public class CsvExample {
 
 	public static void countLines(String csvFile) {
 		int lineCount = 0;
-
-		try (BufferedReader reader = new BufferedReader(new FileReader(csvFile))) {
-			while (reader.readLine() != null) {
-				lineCount++;
+		try (CSVReader reader = new CSVReader(new FileReader(csvFile))) {
+			try {
+				while (reader.readNext() != null) {
+					lineCount++;
+				}
+			} catch (CsvValidationException e) {
+				e.printStackTrace();
 			}
-			System.out.println("Number of lines in the CSV file: " + lineCount);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println("Line count: " + lineCount);
 	}
 }

@@ -39,21 +39,29 @@ public class FileProcessingExample {
     }
 
     public static void wordFrequenciesCount(String filePath, Map<String, Integer> wordFrequency) {
+    	BufferedReader br = null;
         try {
-            BufferedReader br = new BufferedReader(new FileReader(filePath));
+            br = new BufferedReader(new FileReader(filePath));
             String line;
             while ((line = br.readLine()) != null) {
                 String[] words = line.split("\\s+");
                 for (String word : words) {
                     word = word.toLowerCase().replaceAll("[^a-zA-Z]", "");
                     if (!word.isEmpty()) {
-                        wordFrequency.put(word, wordFrequency.getOrDefault(word, 0) + 1);
+                    	int count=wordFrequency.getOrDefault(word, 0) + 1;
+                        wordFrequency.put(word, count);
                     }
                 }
             }
-            br.close();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+        finally {
+        	try {
+				br.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
         }
     }
 

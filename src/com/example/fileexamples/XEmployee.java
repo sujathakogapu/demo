@@ -7,14 +7,14 @@ import java.util.List;
 
 @XmlRootElement(name = "employees")
 public class XEmployee {
-    private List<XEmployeeDetail> employees = new ArrayList<>();
+	private List<XEmployeeDetail> employees = new ArrayList<>();
 
-    @XmlElement(name = "employee")
-    public List<XEmployeeDetail> getEmployees() {
-        return employees;
-    }
+	@XmlElement(name = "employee")
+	public List<XEmployeeDetail> getEmployees() {
+		return employees;
+	}
 
-    public void addEmployee(XEmployeeDetail employee) {
-        employees.add(employee);
-    }
+	public void addEmployee(XEmployeeDetail employee) {
+		employees.add(employee);
+	}
 }
