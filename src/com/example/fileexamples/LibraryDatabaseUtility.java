@@ -44,71 +44,73 @@ public class LibraryDatabaseUtility {
 	}
 
 	private List<Integer> convertCsvToDb(String csvFile) {
-	    String insertQuery = "insert into bookOrganization(title, author, publicationYear, isbn, genre, copiesAvailable) VALUES (?, ?, ?, ?, ?, ?)";
-	    List<Integer> generatedBookIds = new ArrayList<>();
+		String insertQuery = "insert into bookOrganization(title, author, publication_year, isbn, genre, copies_available) VALUES (?, ?, ?, ?, ?, ?)";
+		List<Integer> generatedBookIds = new ArrayList<>();
 
-	    try (CSVReader reader = new CSVReader(new FileReader(csvFile));
-	         PreparedStatement preparedStatement = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS)) {
+		try (CSVReader reader = new CSVReader(new FileReader(csvFile));
+				PreparedStatement preparedStatement = connection.prepareStatement(insertQuery,
+						Statement.RETURN_GENERATED_KEYS)) {
 
-	        // Skip the header line in the CSV file
-	        reader.readNext();
+			// Skip the header line in the CSV file
+			reader.readNext();
 
-	        String[] nextLine;
-	        while ((nextLine = reader.readNext()) != null) {
-	            if (nextLine.length >= 6) {
-	                for (int i = 0; i < 6; i++) {
-	                    preparedStatement.setString(i + 1, nextLine[i]);
-	                }
-	                preparedStatement.executeUpdate();
+			String[] nextLine;
+			while ((nextLine = reader.readNext()) != null) {
+				if (nextLine.length >= 6) {
+					for (int i = 0; i < 6; i++) {
+						preparedStatement.setString(i + 1, nextLine[i]);
+					}
+					preparedStatement.executeUpdate();
 
-	                try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
-	                    if (generatedKeys.next()) {
-	                        int bookId = generatedKeys.getInt(1);
-	                        generatedBookIds.add(bookId);
-	                    }
-	                }
-	            } else {
-	                System.out.println("Skipping incomplete line: " + String.join(", ", nextLine));
-	            }
-	        }
+					try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
+						if (generatedKeys.next()) {
+							int bookId = generatedKeys.getInt(1);
+							generatedBookIds.add(bookId);
+						}
+					}
+				} else {
+					System.out.println("Skipping incomplete line: " + String.join(", ", nextLine));
+				}
+			}
 
-	        System.out.println("CSV data inserted into the database successfully.");
-	    } catch (IOException | CsvValidationException | SQLException e) {
-	        e.printStackTrace();
-	    }
+			System.out.println("CSV data inserted into the database successfully.");
+		} catch (IOException | CsvValidationException | SQLException e) {
+			e.printStackTrace();
+		}
 
-	    return generatedBookIds;
+		return generatedBookIds;
 	}
+
 	public List<LibraryBookDetails> getAllBooks() {
-	    List<LibraryBookDetails> bookList = new ArrayList<>();
-	    String query = "select * from bookOrganization"; // Corrected table name
+		List<LibraryBookDetails> bookList = new ArrayList<>();
+		String query = "select * from bookOrganization"; // Corrected table name
 
-	    try (Statement statement = connection.createStatement(); ResultSet resultSet = statement.executeQuery(query)) {
+		try (Statement statement = connection.createStatement(); ResultSet resultSet = statement.executeQuery(query)) {
 
-	        while (resultSet.next()) {
-	            LibraryBookDetails bookDetails = new LibraryBookDetails();
-	            bookDetails.setBookId(resultSet.getInt("bookId"));
-	            bookDetails.setTitle(resultSet.getString("title"));
-	            bookDetails.setAuthor(resultSet.getString("author"));
-	            bookDetails.setPublicationYear(resultSet.getString("publicationYear"));
-	            bookDetails.setIsbn(resultSet.getString("isbn"));
-	            bookDetails.setGenre(resultSet.getString("genre"));
-	            bookDetails.setCopiesAvailable(resultSet.getString("copiesAvailable")); // Corrected field name
+			while (resultSet.next()) {
+				LibraryBookDetails bookDetails = new LibraryBookDetails();
+				bookDetails.setBookId(resultSet.getInt("bookId"));
+				bookDetails.setTitle(resultSet.getString("title"));
+				bookDetails.setAuthor(resultSet.getString("author"));
+				bookDetails.setPublicationYear(resultSet.getString("publication_year"));
+				bookDetails.setIsbn(resultSet.getString("isbn"));
+				bookDetails.setGenre(resultSet.getString("genre"));
+				bookDetails.setCopiesAvailable(resultSet.getString("copies_available")); // Corrected field name
 
-	            bookList.add(bookDetails);
-	            System.out.println("Book ID: " + bookDetails.getBookId());
-	            System.out.println("Title: " + bookDetails.getTitle());
-	            System.out.println("Author: " + bookDetails.getAuthor());
-	            System.out.println("Publication Year: " + bookDetails.getPublicationYear());
-	            System.out.println("ISBN: " + bookDetails.getIsbn());
-	            System.out.println("Genre: " + bookDetails.getGenre());
-	            System.out.println("Copies Available: " + bookDetails.getCopiesAvailable());
-	            System.out.println();
-	        }
-	    } catch (SQLException e) {
-	        e.printStackTrace();
-	    }
-	    return bookList;
+				bookList.add(bookDetails);
+				System.out.println("Book ID: " + bookDetails.getBookId());
+				System.out.println("Title: " + bookDetails.getTitle());
+				System.out.println("Author: " + bookDetails.getAuthor());
+				System.out.println("Publication Year: " + bookDetails.getPublicationYear());
+				System.out.println("ISBN: " + bookDetails.getIsbn());
+				System.out.println("Genre: " + bookDetails.getGenre());
+				System.out.println("Copies Available: " + bookDetails.getCopiesAvailable());
+				System.out.println();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return bookList;
 	}
 
 	public void convertListToJson(List<LibraryBookDetails> bookList, String jsonFilePath) {
